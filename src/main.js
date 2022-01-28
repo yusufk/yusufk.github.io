@@ -9,6 +9,7 @@ import Isotope from 'isotope-layout';
 import GLightbox from 'glightbox';
 import Waypoint from 'waypoints/lib/noframework.waypoints.min.js';
 
+
 export default function Main() {
   /**
    * Easy selector helper function

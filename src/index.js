@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'boxicons/css/boxicons.css';
+import 'glightbox/dist/css/glightbox.css';
+import 'remixicon/fonts/remixicon.css';
+import 'swiper/css/bundle';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'remixicon/fonts/remixicon.css'
-import Main from './main';
-Main();
 
 ReactDOM.render(
   <React.StrictMode>
