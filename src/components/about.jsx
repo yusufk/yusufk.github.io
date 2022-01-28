@@ -16,7 +16,7 @@ export default class About extends Component {
                             </div>
                             <div className="row">
                                 <div className="col-lg-4" data-aos="fade-right">
-                                    <img src="./img/me.jpg" className="img-fluid" alt="" />
+                                    <img src="../public/assets/img/me.jpg" className="img-fluid" alt="" />
                                 </div>
                                 <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                                     <h3>Specialist: Digital | Telco | Messaging </h3>
@@ -331,7 +331,7 @@ export default class About extends Component {
                                                 <i className="bx bxs-quote-alt-right quote-icon-right" />
                                             </p>
                                             <img
-                                                src="./img/testimonials/testimonials-1.jpg"
+                                                src="../public/assets/img/testimonials/testimonials-1.jpg"
                                                 className="testimonial-img"
                                                 alt=""
                                             />
@@ -350,7 +350,7 @@ export default class About extends Component {
                                                 <i className="bx bxs-quote-alt-right quote-icon-right" />
                                             </p>
                                             <img
-                                                src="./img/testimonials/testimonials-2.jpg"
+                                                src="../public/assets/img/testimonials/testimonials-2.jpg"
                                                 className="testimonial-img"
                                                 alt=""
                                             />
@@ -369,7 +369,7 @@ export default class About extends Component {
                                                 <i className="bx bxs-quote-alt-right quote-icon-right" />
                                             </p>
                                             <img
-                                                src="./img/testimonials/testimonials-3.jpg"
+                                                src="../public/assets/img/testimonials/testimonials-3.jpg"
                                                 className="testimonial-img"
                                                 alt=""
                                             />
@@ -389,7 +389,7 @@ export default class About extends Component {
                                                 <i className="bx bxs-quote-alt-right quote-icon-right" />
                                             </p>
                                             <img
-                                                src="./img/testimonials/testimonials-4.jpg"
+                                                src="../public/assets/img/testimonials/testimonials-4.jpg"
                                                 className="testimonial-img"
                                                 alt=""
                                             />
@@ -409,7 +409,7 @@ export default class About extends Component {
                                                 <i className="bx bxs-quote-alt-right quote-icon-right" />
                                             </p>
                                             <img
-                                                src="./img/testimonials/testimonials-5.jpg"
+                                                src="../public/assets/img/testimonials/testimonials-5.jpg"
                                                 className="testimonial-img"
                                                 alt=""
                                             />

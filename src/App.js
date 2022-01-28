@@ -5,7 +5,7 @@ import Contact from './components/contact';
 import Resume from './components/resume';
 import Portfolio from './components/portfolio';
 import Services from './components/services';
-import Main from './main';
+import Main from './main.js';
 
 function App() {
   return (
