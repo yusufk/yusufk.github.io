@@ -9,6 +9,7 @@ import 'swiper/css/bundle';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Navtools from './navtools.js';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,8 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+Navtools();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

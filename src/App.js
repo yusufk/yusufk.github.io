@@ -5,7 +5,6 @@ import Contact from './components/contact';
 import Resume from './components/resume';
 import Portfolio from './components/portfolio';
 import Services from './components/services';
-import Main from './main.js';
 
 function App() {
   return (
@@ -19,5 +18,5 @@ function App() {
     </div>
   );
 }
-Main();
+
 export default App;
