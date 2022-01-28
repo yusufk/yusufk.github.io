@@ -8,8 +8,6 @@ import Portfolio from './components/portfolio';
 import Services from './components/services';
 import Main from './main';
 
-Main();
-
 function App() {
   return (
     <div className="App">
@@ -22,5 +20,5 @@ function App() {
     </div>
   );
 }
-
+Main();
 export default App;
