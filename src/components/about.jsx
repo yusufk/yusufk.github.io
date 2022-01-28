@@ -19,7 +19,7 @@ export default class About extends Component {
                                     <img src="./img/me.jpg" className="img-fluid" alt="" />
                                 </div>
                                 <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                                    <h3>UI/UX &amp; Graphic Designer</h3>
+                                    <h3>Specialist: Digital | Telco | Messaging </h3>
                                     <p className="fst-italic">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                         eiusmod tempor incididunt ut labore et dolore magna aliqua.

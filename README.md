@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+and is based on this [tutorial](https://www.linkedin.com/pulse/how-make-deploy-your-own-online-resume-using-reactjs-simon-defrenet/), uses this [tool](https://transform.tools/html-to-jsx) and this [theme](https://transform.tools/html-to-jsx).
 
 ## Available Scripts
 
