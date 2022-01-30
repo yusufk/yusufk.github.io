@@ -54,16 +54,16 @@ export default class Header extends Component {
                         </nav>
                         {/* .navbar */}
                         <div className="social-links">
-                            <a href="#" className="twitter">
+                            <a href="https://twitter.com/yusufkza" className="twitter">
                                 <i className="bi bi-twitter" />
                             </a>
-                            <a href="#" className="facebook">
-                                <i className="bi bi-facebook" />
+                            <a href="https://github.com/yusufk" className="github">
+                                <i className="bi bi-github" />
                             </a>
-                            <a href="#" className="instagram">
+                            <a href="https://www.instagram.com/profoundlyperplexed/" className="instagram">
                                 <i className="bi bi-instagram" />
                             </a>
-                            <a href="#" className="linkedin">
+                            <a href="https://www.linkedin.com/in/yusufkaka/" className="linkedin">
                                 <i className="bi bi-linkedin" />
                             </a>
                         </div>
