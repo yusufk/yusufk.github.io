@@ -16,7 +16,7 @@ export default class About extends Component {
                         </div>
                         <div className="row">
                             <div className="col-lg-4" data-aos="fade-right">
-                                <img src="../public/assets/img/me.jpg" className="img-fluid" alt="" />
+                                <img src={require("../img/me.jpg")} className="img-fluid" alt="" />
                             </div>
                             <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                                 <h3>Specialist: Digital | Telco | Messaging </h3>
