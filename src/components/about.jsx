@@ -328,7 +328,7 @@ export default class About extends Component {
                                             <i className="bx bxs-quote-alt-right quote-icon-right" />
                                         </p>
                                         <img
-                                            src="../public/assets/img/testimonials/testimonials-1.jpg"
+                                            src={require("../img/testimonials/testimonials-1.jpg")}
                                             className="testimonial-img"
                                             alt=""
                                         />
@@ -347,7 +347,7 @@ export default class About extends Component {
                                             <i className="bx bxs-quote-alt-right quote-icon-right" />
                                         </p>
                                         <img
-                                            src="../public/assets/img/testimonials/testimonials-2.jpg"
+                                            src={require("../img/testimonials/testimonials-2.jpg")}
                                             className="testimonial-img"
                                             alt=""
                                         />
@@ -366,7 +366,7 @@ export default class About extends Component {
                                             <i className="bx bxs-quote-alt-right quote-icon-right" />
                                         </p>
                                         <img
-                                            src="../public/assets/img/testimonials/testimonials-3.jpg"
+                                            src={require("../img/testimonials/testimonials-3.jpg")}
                                             className="testimonial-img"
                                             alt=""
                                         />
@@ -386,7 +386,7 @@ export default class About extends Component {
                                             <i className="bx bxs-quote-alt-right quote-icon-right" />
                                         </p>
                                         <img
-                                            src="../public/assets/img/testimonials/testimonials-4.jpg"
+                                            src={require("../img/testimonials/testimonials-4.jpg")}
                                             className="testimonial-img"
                                             alt=""
                                         />
@@ -406,7 +406,7 @@ export default class About extends Component {
                                             <i className="bx bxs-quote-alt-right quote-icon-right" />
                                         </p>
                                         <img
-                                            src="../public/assets/img/testimonials/testimonials-5.jpg"
+                                            src={require("../img/testimonials/testimonials-5.jpg")}
                                             className="testimonial-img"
                                             alt=""
                                         />
