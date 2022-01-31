@@ -15,104 +15,102 @@ export default class Resume extends Component {
                         </div>
                         <div className="row">
                             <div className="col-lg-6">
-                                <h3 className="resume-title">Sumary</h3>
+                                <h3 className="resume-title">Summary</h3>
                                 <div className="resume-item pb-0">
-                                    <h4>Alice Barkley</h4>
+                                    <h4>Yusuf Kaka</h4>
                                     <p>
                                         <em>
-                                            Innovative and deadline-driven Graphic Designer with 3+ years of
-                                            experience designing and developing user-centered digital/print
-                                            marketing material from initial concept to final, polished
-                                            deliverable.
+                                            Innovative and experienced technologists with over 20 years of experience in GSM, App Development, Innovation strategy and technology leadership.
                                         </em>
                                     </p>
                                     <p></p>
                                     <ul>
-                                        <li>Portland par 127,Orlando, FL</li>
-                                        <li>(123) 456-7891</li>
-                                        <li>alice.barkley@example.com</li>
+                                        <li>Johannesburg, ZA</li>
+                                        <li>yusufk -at- gmail.com</li>
                                     </ul>
                                     <p />
                                 </div>
                                 <h3 className="resume-title">Education</h3>
                                 <div className="resume-item">
-                                    <h4>Master of Fine Arts &amp; Graphic Design</h4>
-                                    <h5>2015 - 2016</h5>
+                                    <h4>B.Eng Engineering (Computers)</h4>
+                                    <h5>2003 - 2005</h5>
                                     <p>
-                                        <em>Rochester Institute of Technology, Rochester, NY</em>
+                                        <em>Univeristy of Pretoria, Pretoria</em>
                                     </p>
                                     <p>
-                                        Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam
-                                        iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti
-                                        nerada porti sand markend
+                                        Additional Honours Degree obtained as part of the Masters Program at University of Pretoria.
                                     </p>
                                 </div>
                                 <div className="resume-item">
-                                    <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-                                    <h5>2010 - 2014</h5>
+                                    <h4>B.Sc. Engineering (Electrical)</h4>
+                                    <h5>1997 - 2002</h5>
                                     <p>
-                                        <em>Rochester Institute of Technology, Rochester, NY</em>
+                                        <em>University of Witwatersrand, Johannesburg</em>
                                     </p>
                                     <p>
-                                        Quia nobis sequi est occaecati aut. Repudiandae et iusto quae
-                                        reiciendis et quis Eius vel ratione eius unde vitae rerum
-                                        voluptates asperiores voluptatem Earum molestiae consequatur neque
-                                        etlon sader mart dila
+                                        Undergrad degree in Electrical Engineering, specialising in RF and Software Engineering, obtained as part of the Bachelor of Science Program at University of Witwatersrand.
                                     </p>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <h3 className="resume-title">Professional Experience</h3>
                                 <div className="resume-item">
-                                    <h4>Senior graphic design specialist</h4>
-                                    <h5>2019 - Present</h5>
+                                    <h4>Head of Technology</h4>
+                                    <h5>2021 - 2022</h5>
                                     <p>
-                                        <em>Experion, New York, NY </em>
+                                        <em>ayoba, ZA</em>
                                     </p>
-                                    <p></p>
+                                    <p>
+                                        <em>As Head of Technology I lead all technical development and operations at ayoba, acting as both a technology and operations expert, making decisions impacting current and future plans for a highly scalable digital communication platform. I oversee all technology and technological resources, establish the technology vision, strategies, and growth plans and I'm responsible for managing the technology roadmap.
+                                        </em>
+                                    </p>
                                     <ul>
                                         <li>
-                                            Lead in the design, development, and implementation of the
-                                            graphic, layout, and production communication materials
+                                            Built a high-performance technical team to deliver a high-quality product and service.
                                         </li>
                                         <li>
-                                            Delegate tasks to the 7 members of the design team and provide
-                                            counsel on all aspects of the project.{" "}
+                                            Responsible for managing the technology architecture and design authority function
                                         </li>
                                         <li>
-                                            Supervise the assessment of all graphic materials in order to
-                                            ensure quality and accuracy of the design
+                                            Maintaining technical operations and related systems
                                         </li>
                                         <li>
-                                            Oversee the efficient use of production project budgets ranging
-                                            from $2,000 - $25,000
+                                            Delivery of Technical initiatives in an iterative, agile, and fast-paced environment
+                                        </li>
+                                        <li>
+                                            Building strategic relationships with key technical and business leaders to ensure successful delivery of the technology vision
                                         </li>
                                     </ul>
                                     <p />
                                 </div>
                                 <div className="resume-item">
-                                    <h4>Graphic design specialist</h4>
-                                    <h5>2017 - 2018</h5>
+                                    <h4>General Manager: Product Development and Innovation</h4>
+                                    <h5>2018 - Present</h5>
                                     <p>
-                                        <em>Stepping Stone Advertising, New York, NY</em>
+                                        <em>MTN Group, ZA</em>
                                     </p>
-                                    <p></p>
+                                    <p>
+                                        <em>As the General Manager for Product Development and Innovation, my role was to execute on a new centralised product developement strategy, in which MTN Group would invest into software development of key channels and products that could benefit from centralised development and deployment. This included the "Next Generation" myMTN App, which was re-imagined and designed from scratch using modern cloud-native architecture and modern development frameworks.
+                                        </em>
+                                    </p>
                                     <ul>
                                         <li>
-                                            Developed numerous marketing programs (logos,
-                                            brochures,infographics, presentations, and advertisements).
+                                            Motivate the technical and business case for central development "build vs buy" for digital channels and key products.
                                         </li>
                                         <li>
-                                            Managed up to 5 projects or tasks at a given time while under
-                                            pressure
+                                            Build a high-performance team to execute on the strategy
                                         </li>
                                         <li>
-                                            Recommended and consulted with clients on the most appropriate
-                                            graphic design
+                                            Identify and work with key stakeholders in selected Opcos
                                         </li>
                                         <li>
-                                            Created 4+ design presentations and proposals a month for
-                                            clients and account managers
+                                            Gain support and trust with Opcos in order to move from vendor-built solutions to internally developed platforms
+                                        </li>
+                                        <li>
+                                            Establish a decoupled, layered channel platform architecture
+                                        </li>
+                                        <li>
+                                            Select and procure key SaaS and PaaS solutions required to establish the platform
                                         </li>
                                     </ul>
                                     <p />

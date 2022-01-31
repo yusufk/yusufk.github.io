@@ -29,11 +29,11 @@ export default class Header extends Component {
                                         About
                                     </a>
                                 </li>
-                                {/* <li>
+                                <li>
                                     <a className="nav-link" href="#resume">
                                         Resume
                                     </a>
-                                </li>*/}
+                                </li>
                                 <li>
                                     <a className="nav-link" href="#repos">
                                         Repositories
