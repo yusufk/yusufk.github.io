@@ -4,7 +4,7 @@ import Header from './components/header';
 import Contact from './components/contact';
 import Resume from './components/resume';
 import Portfolio from './components/portfolio';
-import Services from './components/services';
+import Repositories from './components/repos';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Contact></Contact>
       <Resume></Resume>
       <Portfolio></Portfolio>
-      <Services></Services>
+      <Repositories></Repositories>
     </div>
   );
 }

@@ -35,8 +35,8 @@ export default class Header extends Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="nav-link" href="#services">
-                                        Services
+                                    <a className="nav-link" href="#repos">
+                                        Repositories
                                     </a>
                                 </li>
                                 <li>
