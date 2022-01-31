@@ -29,17 +29,17 @@ export default class Header extends Component {
                                         About
                                     </a>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a className="nav-link" href="#resume">
                                         Resume
                                     </a>
-                                </li>
+                                </li>*/}
                                 <li>
                                     <a className="nav-link" href="#repos">
                                         Repositories
                                     </a>
                                 </li>
-                                <li>
+                                {/*<li>
                                     <a className="nav-link" href="#portfolio">
                                         Portfolio
                                     </a>
@@ -48,7 +48,7 @@ export default class Header extends Component {
                                     <a className="nav-link" href="#contact">
                                         Contact
                                     </a>
-                                </li>
+                                </li>*/}
                             </ul>
                             <i className="bi bi-list mobile-nav-toggle" />
                         </nav>
