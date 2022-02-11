@@ -10,8 +10,8 @@ export default class Portfolio extends Component {
                 <section id="portfolio" className="portfolio">
                     <div className="container">
                         <div className="section-title">
-                            <h2>Portfolio</h2>
-                            <p>My Works</p>
+                            <h2>Gallery</h2>
+                            <p>My art</p>
                         </div>
                         <div className="row">
                             <div className="col-lg-12 d-flex justify-content-center">
@@ -19,9 +19,9 @@ export default class Portfolio extends Component {
                                     <li data-filter="*" className="filter-active">
                                         All
                                     </li>
-                                    <li data-filter=".filter-app">App</li>
-                                    <li data-filter=".filter-card">Card</li>
-                                    <li data-filter=".filter-web">Web</li>
+                                    <li data-filter=".filter-app">Photos</li>
+                                    <li data-filter=".filter-card">Art</li>
+                                    <li data-filter=".filter-web">NFT</li>
                                 </ul>
                             </div>
                         </div>
