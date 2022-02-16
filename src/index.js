@@ -9,7 +9,7 @@ import 'swiper/css/bundle';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Navtools from './navtools.js';
+import Navtools from './lib/navtools.js';
 
 ReactDOM.render(
   <React.StrictMode>
