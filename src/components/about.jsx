@@ -54,10 +54,9 @@ export default class About extends Component {
                                     </div>
                                 </div>
                                 <p>
-                                    Life is short and there is only so much that can be achieved in the time
-                                    that we've been afforded. Technology has the potential to change lives
-                                    and the world at scale. I'm therefore always on the look-out for new technology
-                                    that can be applied to my context for maximum positive impact.
+                                    Life is short, and there is a limit to what can be achieved in the time
+                                    that we've been gifted. Technology gives us the ability to make an impact at scale.
+                                    It's my lifes ambition in life to focus my creativity, technical skills and curiosity to solve real-world problems.
                                 </p>
                             </div>
                         </div>
