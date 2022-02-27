@@ -11,7 +11,7 @@ export default class Portfolio extends Component {
                     <div className="container">
                         <div className="section-title">
                             <h2>Gallery</h2>
-                            <p>My art</p>
+                            <p>My portfolio</p>
                         </div>
                         <div className="row">
                             <div className="col-lg-12 d-flex justify-content-center">
@@ -35,30 +35,16 @@ export default class Portfolio extends Component {
                                     />
                                     <div className="portfolio-info">
                                         <h4>The Bee</h4>
-                                        <p>Photo</p>
+                                        <p>﷽ </p>
+                                        <p>Then eat from all the fruits and follow the ways of your Lord laid down [for you]. There emerges from their bellies a drink, varying in colors, in which there is healing for people. Indeed in that is a sign for a people who give thought.</p>
+                                        <p>Surah An-Nahl [16:69]</p>
                                         <div className="portfolio-links">
-                                            <a
-                                                href="../img/portfolio/portfolio-1.jpg"
-                                                data-gallery="portfolioGallery"
-                                                className="portfolio-lightbox"
-                                                title="Photo 1"
-                                            >
-                                                <i className="bx bx-plus" />
-                                            </a>
-                                            <a
-                                                href="portfolio-details.jsx"
-                                                data-gallery="portfolioDetailsGallery"
-                                                data-glightbox="type: external"
-                                                className="portfolio-details-lightbox"
-                                                title="Portfolio Details"
-                                            >
-                                                <i className="bx bx-link" />
-                                            </a>
+                                            <a href="https://quran.com/16/69"><i className="bx bx-link" /></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-md-6 portfolio-item filter-web">
+                            <div className="col-lg-4 col-md-6 portfolio-item filter-app">
                                 <div className="portfolio-wrap">
                                     <img
                                         src={require("../img/portfolio/portfolio-2.jpg")}
@@ -66,24 +52,13 @@ export default class Portfolio extends Component {
                                         alt=""
                                     />
                                     <div className="portfolio-info">
-                                        <h4>Web 3</h4>
-                                        <p>Web</p>
+                                        <h4>The Rapture</h4>
+                                        <p>﷽ </p>
+                                        <p>When the sky ruptures,</p>
+                                        <p>And when the stars fall, scattering...</p>
+                                        <p>Surah Al-Infitar [82:1]</p>
                                         <div className="portfolio-links">
-                                            <a
-                                                href="../img/portfolio/portfolio-2.jpg"
-                                                data-gallery="portfolioGallery"
-                                                className="portfolio-lightbox"
-                                                title="Web 3"
-                                            >
-                                                <i className="bx bx-plus" />
-                                            </a>
-                                            <a
-                                                href="portfolio-details.jsx"
-                                                data-gallery="portfolioDetailsGallery"
-                                                data-glightbox="type: external"
-                                                className="portfolio-details-lightbox"
-                                                title="Portfolio Details"
-                                            >
+                                            <a href="https://quran.com/82/1/">
                                                 <i className="bx bx-link" />
                                             </a>
                                         </div>
@@ -98,56 +73,13 @@ export default class Portfolio extends Component {
                                         alt=""
                                     />
                                     <div className="portfolio-info">
-                                        <h4>App 2</h4>
-                                        <p>App</p>
+                                        <h4>Parents</h4>
+                                        <p>﷽ </p>
+                                        <p>For your Lord has decreed that you worship none but Him. And honour your parents. If one or both of them reach old age in your care, never say to them ˹even˺ ‘ugh,’ nor yell at them.</p>
+                                        <p>Rather, address them respectfully.</p>
+                                        <p>Surah An-Isra [17:23]</p>
                                         <div className="portfolio-links">
-                                            <a
-                                                href="../img/portfolio/portfolio-3.jpg"
-                                                data-gallery="portfolioGallery"
-                                                className="portfolio-lightbox"
-                                                title="App 2"
-                                            >
-                                                <i className="bx bx-plus" />
-                                            </a>
-                                            <a
-                                                href="portfolio-details.jsx"
-                                                data-gallery="portfolioDetailsGallery"
-                                                data-glightbox="type: external"
-                                                className="portfolio-details-lightbox"
-                                                title="Portfolio Details"
-                                            >
-                                                <i className="bx bx-link" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-                                <div className="portfolio-wrap">
-                                    <img
-                                        src={require("../img/portfolio/portfolio-4.jpg")}
-                                        className="img-fluid"
-                                        alt=""
-                                    />
-                                    <div className="portfolio-info">
-                                        <h4>Card 2</h4>
-                                        <p>Card</p>
-                                        <div className="portfolio-links">
-                                            <a
-                                                href="../img/portfolio/portfolio-4.jpg"
-                                                data-gallery="portfolioGallery"
-                                                className="portfolio-lightbox"
-                                                title="Card 2"
-                                            >
-                                                <i className="bx bx-plus" />
-                                            </a>
-                                            <a
-                                                href="portfolio-details.jsx"
-                                                data-gallery="portfolioDetailsGallery"
-                                                data-glightbox="type: external"
-                                                className="portfolio-details-lightbox"
-                                                title="Portfolio Details"
-                                            >
+                                            <a href="https://quran.com/17/23/">
                                                 <i className="bx bx-link" />
                                             </a>
                                         </div>
@@ -157,125 +89,15 @@ export default class Portfolio extends Component {
                             <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                                 <div className="portfolio-wrap">
                                     <img
-                                        src={require("../img/portfolio/portfolio-5.jpg")}
+                                        src="https://lh3.googleusercontent.com/qefGyHru463Cdh3Jsob8UrA5oJIhLd5z9yUowMTgHglZyqjnLUqQiNk7POPiqiqjn3jGWnFU2YRfpJyXhT7tHoDh0P6nhiw1dBxzyA=s0"
                                         className="img-fluid"
                                         alt=""
                                     />
                                     <div className="portfolio-info">
-                                        <h4>Web 2</h4>
-                                        <p>Web</p>
+                                        <h4>Bobot Starsky</h4>
+                                        <p>NFT</p>
                                         <div className="portfolio-links">
-                                            <a
-                                                href="../img/portfolio/portfolio-5.jpg"
-                                                data-gallery="portfolioGallery"
-                                                className="portfolio-lightbox"
-                                                title="Web 2"
-                                            >
-                                                <i className="bx bx-plus" />
-                                            </a>
-                                            <a
-                                                href="portfolio-details.jsx"
-                                                data-gallery="portfolioDetailsGallery"
-                                                data-glightbox="type: external"
-                                                className="portfolio-details-lightbox"
-                                                title="Portfolio Details"
-                                            >
-                                                <i className="bx bx-link" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-                                <div className="portfolio-wrap">
-                                    <img
-                                        src={require("../img/portfolio/portfolio-6.jpg")}
-                                        className="img-fluid"
-                                        alt=""
-                                    />
-                                    <div className="portfolio-info">
-                                        <h4>App 3</h4>
-                                        <p>App</p>
-                                        <div className="portfolio-links">
-                                            <a
-                                                href="../img/portfolio/portfolio-6.jpg"
-                                                data-gallery="portfolioGallery"
-                                                className="portfolio-lightbox"
-                                                title="App 3"
-                                            >
-                                                <i className="bx bx-plus" />
-                                            </a>
-                                            <a
-                                                href="portfolio-details.jsx"
-                                                data-gallery="portfolioDetailsGallery"
-                                                data-glightbox="type: external"
-                                                className="portfolio-details-lightbox"
-                                                title="Portfolio Details"
-                                            >
-                                                <i className="bx bx-link" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-                                <div className="portfolio-wrap">
-                                    <img
-                                        src={require("../img/portfolio/portfolio-7.jpg")}
-                                        className="img-fluid"
-                                        alt=""
-                                    />
-                                    <div className="portfolio-info">
-                                        <h4>Card 1</h4>
-                                        <p>Card</p>
-                                        <div className="portfolio-links">
-                                            <a
-                                                href="../img/portfolio/portfolio-7.jpg"
-                                                data-gallery="portfolioGallery"
-                                                className="portfolio-lightbox"
-                                                title="Card 1"
-                                            >
-                                                <i className="bx bx-plus" />
-                                            </a>
-                                            <a
-                                                href="portfolio-details.jsx"
-                                                data-gallery="portfolioDetailsGallery"
-                                                data-glightbox="type: external"
-                                                className="portfolio-details-lightbox"
-                                                title="Portfolio Details"
-                                            >
-                                                <i className="bx bx-link" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-                                <div className="portfolio-wrap">
-                                    <img
-                                        src={require("../img/portfolio/portfolio-8.jpg")}
-                                        className="img-fluid"
-                                        alt=""
-                                    />
-                                    <div className="portfolio-info">
-                                        <h4>Card 3</h4>
-                                        <p>Card</p>
-                                        <div className="portfolio-links">
-                                            <a
-                                                href="../img/portfolio/portfolio-8.jpg"
-                                                data-gallery="portfolioGallery"
-                                                className="portfolio-lightbox"
-                                                title="Card 3"
-                                            >
-                                                <i className="bx bx-plus" />
-                                            </a>
-                                            <a
-                                                href="portfolio-details.jsx"
-                                                data-gallery="portfolioDetailsGallery"
-                                                data-glightbox="type: external"
-                                                className="portfolio-details-lightbox"
-                                                title="Portfolio Details"
-                                            >
+                                            <a href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/96575051771539935017186713945733009438682784717990966492482054549980265316353/">
                                                 <i className="bx bx-link" />
                                             </a>
                                         </div>
@@ -285,29 +107,48 @@ export default class Portfolio extends Component {
                             <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                                 <div className="portfolio-wrap">
                                     <img
-                                        src={require("../img/portfolio/portfolio-9.jpg")}
+                                        src="https://lh3.googleusercontent.com/DsSMIDNmkMBTxTpD1ZD2Qtu_0Nxi5VBVUi7VzFwwcGXAXMHFzlGPFhuHQ81JzexfBsspF7IC0nDTFTYOEwiMxGSG6BLPjKTMdUBHfA=s0"
                                         className="img-fluid"
                                         alt=""
                                     />
                                     <div className="portfolio-info">
-                                        <h4>Web 3</h4>
-                                        <p>Web</p>
+                                        <h4>Bobot pink googly</h4>
                                         <div className="portfolio-links">
-                                            <a
-                                                href="../img/portfolio/portfolio-9.jpg"
-                                                data-gallery="portfolioGallery"
-                                                className="portfolio-lightbox"
-                                                title="Web 3"
-                                            >
-                                                <i className="bx bx-plus" />
+                                            <a href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/96575051771539935017186713945733009438682784717990966492482054554378311827457/">
+                                                <i className="bx bx-link" />
                                             </a>
-                                            <a
-                                                href="portfolio-details.jsx"
-                                                data-gallery="portfolioDetailsGallery"
-                                                data-glightbox="type: external"
-                                                className="portfolio-details-lightbox"
-                                                title="Portfolio Details"
-                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6 portfolio-item filter-web">
+                                <div className="portfolio-wrap">
+                                    <img
+                                        src="https://lh3.googleusercontent.com/ISYww5WlsHVxKwntWk6vqykLQ7BzURQvXGFH8agkYRmm1jsbOsYwqaJMldIVFnP_cw6tsDxblQ1ybQeWzSHwKxuNJBWF6kDoz5bSww=s0"
+                                        className="img-fluid"
+                                        alt=""
+                                    />
+                                    <div className="portfolio-info">
+                                        <h4>Bobot neon-cheese-head</h4>
+                                        <div className="portfolio-links">
+                                            <a href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/96575051771539935017186713945733009438682784717990966492482054555477823455233/">
+                                                <i className="bx bx-link" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6 portfolio-item filter-card">
+                                <div className="portfolio-wrap">
+                                    <img
+                                        src="https://lh3.googleusercontent.com/FsAwmNMdAjhCAjKBsZEwWveRMrQ-3FC8ZA0XSrBZ7AN0uSDP_gWf2qr24NA-UsCcObxdvmC8icVhvnfHff44HvzipfMwBFDo9MAP=s0"
+                                        className="img-fluid"
+                                        alt=""
+                                    />
+                                    <div className="portfolio-info">
+                                        <h4>Fire and Water</h4>
+                                        <div className="portfolio-links">
+                                            <a href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/96575051771539935017186713945733009438682784717990966492482054547781242060801/">
                                                 <i className="bx bx-link" />
                                             </a>
                                         </div>
