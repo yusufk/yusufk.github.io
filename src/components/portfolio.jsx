@@ -34,19 +34,19 @@ export default class Portfolio extends Component {
                                         alt=""
                                     />
                                     <div className="portfolio-info">
-                                        <h4>App 1</h4>
-                                        <p>App</p>
+                                        <h4>The Bee</h4>
+                                        <p>Photo</p>
                                         <div className="portfolio-links">
                                             <a
                                                 href="../img/portfolio/portfolio-1.jpg"
                                                 data-gallery="portfolioGallery"
                                                 className="portfolio-lightbox"
-                                                title="App 1"
+                                                title="Photo 1"
                                             >
                                                 <i className="bx bx-plus" />
                                             </a>
                                             <a
-                                                href="portfolio-details.html"
+                                                href="portfolio-details.jsx"
                                                 data-gallery="portfolioDetailsGallery"
                                                 data-glightbox="type: external"
                                                 className="portfolio-details-lightbox"
@@ -78,7 +78,7 @@ export default class Portfolio extends Component {
                                                 <i className="bx bx-plus" />
                                             </a>
                                             <a
-                                                href="portfolio-details.html"
+                                                href="portfolio-details.jsx"
                                                 data-gallery="portfolioDetailsGallery"
                                                 data-glightbox="type: external"
                                                 className="portfolio-details-lightbox"
@@ -110,7 +110,7 @@ export default class Portfolio extends Component {
                                                 <i className="bx bx-plus" />
                                             </a>
                                             <a
-                                                href="portfolio-details.html"
+                                                href="portfolio-details.jsx"
                                                 data-gallery="portfolioDetailsGallery"
                                                 data-glightbox="type: external"
                                                 className="portfolio-details-lightbox"
@@ -142,7 +142,7 @@ export default class Portfolio extends Component {
                                                 <i className="bx bx-plus" />
                                             </a>
                                             <a
-                                                href="portfolio-details.html"
+                                                href="portfolio-details.jsx"
                                                 data-gallery="portfolioDetailsGallery"
                                                 data-glightbox="type: external"
                                                 className="portfolio-details-lightbox"
@@ -174,7 +174,7 @@ export default class Portfolio extends Component {
                                                 <i className="bx bx-plus" />
                                             </a>
                                             <a
-                                                href="portfolio-details.html"
+                                                href="portfolio-details.jsx"
                                                 data-gallery="portfolioDetailsGallery"
                                                 data-glightbox="type: external"
                                                 className="portfolio-details-lightbox"
@@ -206,7 +206,7 @@ export default class Portfolio extends Component {
                                                 <i className="bx bx-plus" />
                                             </a>
                                             <a
-                                                href="portfolio-details.html"
+                                                href="portfolio-details.jsx"
                                                 data-gallery="portfolioDetailsGallery"
                                                 data-glightbox="type: external"
                                                 className="portfolio-details-lightbox"
@@ -238,7 +238,7 @@ export default class Portfolio extends Component {
                                                 <i className="bx bx-plus" />
                                             </a>
                                             <a
-                                                href="portfolio-details.html"
+                                                href="portfolio-details.jsx"
                                                 data-gallery="portfolioDetailsGallery"
                                                 data-glightbox="type: external"
                                                 className="portfolio-details-lightbox"
@@ -270,7 +270,7 @@ export default class Portfolio extends Component {
                                                 <i className="bx bx-plus" />
                                             </a>
                                             <a
-                                                href="portfolio-details.html"
+                                                href="portfolio-details.jsx"
                                                 data-gallery="portfolioDetailsGallery"
                                                 data-glightbox="type: external"
                                                 className="portfolio-details-lightbox"
@@ -302,7 +302,7 @@ export default class Portfolio extends Component {
                                                 <i className="bx bx-plus" />
                                             </a>
                                             <a
-                                                href="portfolio-details.html"
+                                                href="portfolio-details.jsx"
                                                 data-gallery="portfolioDetailsGallery"
                                                 data-glightbox="type: external"
                                                 className="portfolio-details-lightbox"
