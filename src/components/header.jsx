@@ -15,7 +15,15 @@ export default class Header extends Component {
                         {/* Uncomment below if you prefer to use an image logo */}
                         {/* <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> */}
                         <h2>
-                            I'm a passionate <span>Engineer</span> from Johannesburg
+                            I'm a passionate&nbsp;
+                            <div className="ms-slider">
+                                <ul className="ms-slider__words">
+                                        <li className="ms-slider__word">Engineer</li>
+                                        <li className="ms-slider__word">Tech-leader</li>
+                                        <li className="ms-slider__word">Father</li>
+                                        <li className="ms-slider__word">Engineer</li>
+                                </ul>
+                            </div>
                         </h2>
                         <nav id="navbar" className="navbar">
                             <ul>
