@@ -20,15 +20,10 @@ export default class Resume extends Component {
                                     <h4>Yusuf Kaka</h4>
                                     <p>
                                         <em>
-                                            Experienced technologists with over 20 years of experience in GSM, App Development, Innovation management and technology leadership.
+                                            Experienced technologists with 20+ years of experience in telecommunications, mobile app development, innovation management and technology leadership.
                                         </em>
                                     </p>
-                                    <p></p>
-                                    <ul>
-                                        <li>Johannesburg, ZA</li>
-                                        <li>yusufk -at- gmail.com</li>
-                                    </ul>
-                                    <p />
+                                    <p>Contact: yusufk -at- gmail.com</p>
                                 </div>
                                 <h3 className="resume-title">Education</h3>
                                 <div className="resume-item">
