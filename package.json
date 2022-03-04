@@ -14,6 +14,7 @@
     "isotope-layout": "^3.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-github-calendar": "^3.2.2",
     "react-scripts": "^5.0.0",
     "react-waypoint": "^10.1.0",
     "remixicon": "^2.5.0",

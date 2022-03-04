@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import GitHubCalendar from 'react-github-calendar';
 
 
 export default class Repositories extends Component {
@@ -55,7 +56,7 @@ export default class Repositories extends Component {
                                         </h4>
                                     </a>
                                     <p>
-                                        Source code for this site, as an excercise to get familiar with React development and static websites
+                                        Source code for this site! Developed as an excercise to get familiar with React development, 0-cost hosting and static websites.
                                     </p>
                                 </div>
                             </div>
@@ -105,6 +106,11 @@ export default class Repositories extends Component {
                                 </div>
                             </div>
                         </div>
+                        <p>More repos can be found <a href="https://github.com/yusufk/">here</a></p>
+                        <div className="section-title">
+                            <h2>Contributions</h2>
+                        </div>
+                        <GitHubCalendar username="yusufk" />
                     </div>
                 </section>
                 {/* End Repositories Section */}
