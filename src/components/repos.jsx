@@ -106,7 +106,7 @@ export default class Repositories extends Component {
                                 </div>
                             </div>
                         </div>
-                        <p>More repos can be found <a href="https://github.com/yusufk/">here</a></p>
+                        <p>More source code repos can be found <a href="https://github.com/yusufk/">here</a>, <a href="https://bitbucket.org/mitpeople/">here</a> and <a href="https://gitlab.com/yusufk">here</a>.</p>
                         <div className="section-title">
                             <h2>Contributions</h2>
                         </div>

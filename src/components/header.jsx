@@ -19,8 +19,14 @@ export default class Header extends Component {
                             <div className="ms-slider">
                                 <ul className="ms-slider__words">
                                         <li className="ms-slider__word">Engineer</li>
-                                        <li className="ms-slider__word">Tech-leader</li>
+                                        <li className="ms-slider__word">Husband</li>
+                                        <li className="ms-slider__word">Developer</li>
+                                        <li className="ms-slider__word">Wanderer</li>
                                         <li className="ms-slider__word">Father</li>
+                                        <li className="ms-slider__word">Mountain biker</li>
+                                        <li className="ms-slider__word">Tinkerer</li>
+                                        <li className="ms-slider__word">Muslim</li>
+                                        <li className="ms-slider__word">Technologist</li>
                                         <li className="ms-slider__word">Engineer</li>
                                 </ul>
                             </div>
