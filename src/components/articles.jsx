@@ -20,7 +20,7 @@ export default class Articles extends Component {
             headers: { Authorization: `Bearer ${token}` }
         };
         try {
-            const response = await axios.get('https://yusufk.herokuapp.com/api/articles', config);
+            const response = await axios.get('https://cms.kaka.co.za/api/articles', config);
             this.setState({ articles: response.data, loading: false });
         } catch (error) {
             this.setState({ error });
