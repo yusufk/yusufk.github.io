@@ -58,11 +58,11 @@ export default class Header extends Component {
                                         Gallery
                                     </a>
                                 </li>
-                                {/*<li>
-                                    <a className="nav-link" href="#contact">
-                                        Contact
+                                {<li>
+                                    <a className="nav-link" href="#articles">
+                                        Thoughts
                                     </a>
-                                </li>*/}
+                                </li>}
                             </ul>
                             <i className="bi bi-list mobile-nav-toggle" />
                         </nav>
