@@ -10,6 +10,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Navtools from './lib/navtools.js';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('G-J0X6EB8JL4');
 
 ReactDOM.render(
   <React.StrictMode>
