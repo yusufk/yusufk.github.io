@@ -74,8 +74,8 @@ export default class Header extends Component {
                             <a href="https://github.com/yusufk" className="github">
                                 <i className="bi bi-github" />
                             </a>
-                            <a href="https://www.instagram.com/profoundlyperplexed/" className="instagram">
-                                <i className="bi bi-instagram" />
+                            <a href="https://t.me/yusufkaka" className="telegram">
+                                <i className="bi bi-telegram" />
                             </a>
                             <a href="https://www.linkedin.com/in/yusufkaka/" className="linkedin">
                                 <i className="bi bi-linkedin" />
