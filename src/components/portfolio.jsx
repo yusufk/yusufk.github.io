@@ -57,7 +57,7 @@ export default class Portfolio extends Component {
                                     if (artwork.attributes.categories.data.length > 0) {
                                         filterType = "col-lg-4 col-md-6 portfolio-item filter-" + artwork.attributes.categories.data[0].attributes.Category.toLowerCase();
                                     } 
-                                    if (artwork.attributes.Media.data.attributes.url !== null) {
+                                    if (artwork.attributes.Media.data !== null) {
                                         imgURL = artwork.attributes.Media.data.attributes.url;
                                     }
                                     return (
