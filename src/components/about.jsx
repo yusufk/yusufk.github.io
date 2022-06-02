@@ -21,7 +21,7 @@ export default class About extends Component {
                             <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                                 <h3>Specialist: Digital | Telco | Messaging </h3>
                                 <p className="fst-italic">
-                                    > 20 years of experience in the mobile technology, software devlopment, digital channels, telecommunications and messaging.
+                                    > 20 years of experience in the mobile technology, software development, digital channels, telecommunications and messaging.
                                 </p>
                                 <div className="row">
                                     <div className="col-lg-6">
