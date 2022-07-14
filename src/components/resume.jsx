@@ -50,6 +50,29 @@ export default class Resume extends Component {
                             <div className="col-lg-6">
                                 <h3 className="resume-title">Professional Experience</h3>
                                 <div className="resume-item">
+                                    <h4>SME and Startups Tech Lead</h4>
+                                    <h5>2022 - Present</h5>
+                                    <p>
+                                        <em>Microsoft ATO</em>
+                                    </p>
+                                    <p>
+                                        <em>Empowering African start-ups and SME's with the power of Microsoft's Cloud.</em>
+                                    </p>
+                                    <p>Key responsibilities:</p>
+                                    <ul>
+                                        <li>
+                                            Establish technical engagement models with startups tailored to the stages of the startups growth.
+                                        </li>
+                                        <li>
+                                            Create value for SME's and startups through ecosystem enabling platforms and partnerships.
+                                        </li>
+                                        <li>
+                                            Create awareness and facilitate upskilling of talent in Microsoft Cloud technologies.
+                                        </li>
+                                    </ul>
+                                    <p />
+                                </div>
+                                <div className="resume-item">
                                     <h4>Head of Technology</h4>
                                     <h5>2020 - 2022</h5>
                                     <p>
