@@ -48,7 +48,7 @@ export default class About extends Component {
                                             </li>
                                             <li>
                                                 <i className="bi bi-chevron-right" />{" "}
-                                                <strong>Email:</strong> <span>yusufk-at-gmail.com</span>
+                                                <strong>Email:</strong> <span>yusufk-at-outlook.com</span>
                                             </li>
                                         </ul>
                                     </div>
