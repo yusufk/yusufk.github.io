@@ -23,7 +23,7 @@ export default class Resume extends Component {
                                             Experienced technologists with 20+ years of experience in telecommunications, mobile app development, innovation management and technology leadership.
                                         </em>
                                     </p>
-                                    <p>Contact: yusufk -at- gmail.com</p>
+                                    <p>Contact: yusufk -at- outlook.com</p>
                                 </div>
                                 <h3 className="resume-title">Education</h3>
                                 <div className="resume-item">
