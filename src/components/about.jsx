@@ -56,7 +56,7 @@ export default class About extends Component {
                                 <p>
                                     Life is short, and there is a limit to what can be achieved in the time
                                     that we've been gifted. Technology gives us the ability to make an impact at scale, maximising what we can achieve in that short time.
-                                    It's my lifes ambition in life to focus my creativity, technical skills and curiosity to solve real-world problems.
+                                    It's my lifes ambition in life to focus my creativity, technical skills and curiosity on maximising positive impact on society.
                                 </p>
                             </div>
                         </div>
