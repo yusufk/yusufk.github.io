@@ -30,24 +30,29 @@ export default class Articles extends Component {
     render() {
 
         if (!this.state.loading) {
+            // Sort articles by publishedAt in descending order
+            const sortedArticles = this.state.articles.data.sort((a, b) => {
+                return new Date(b.attributes.publishedAt) - new Date(a.attributes.publishedAt);
+            });
+
             return (
                 <div>
                     {/* ======= Articles Section ======= */}
                     <section id="articles" className="articles">
                         <div className="container">
                             <div className="section-title">
-                                <h2>Thoughts ({this.state.articles.data.length})</h2>
+                                <h2>Thoughts ({sortedArticles.length})</h2>
                             </div>
                             <div className="Articles">
                                 <div className="ArticlesList-container">
-                                    {this.state.articles.data.map((article, index) => {
+                                    {sortedArticles.map((article, index) => {
                                         const pubDate = new Date(article.attributes.publishedAt);
                                         return (
                                             <div className="ArticlesList-article" key={article.id}>
                                                 <h3>{article.attributes.Title}</h3>
                                                 <ReactMarkdown children={article.attributes.Body} />
                                                 <p>Published: {pubDate.toLocaleString()}</p>
-                                                <hr/>
+                                                <hr />
                                             </div>
                                         );
                                     })}
