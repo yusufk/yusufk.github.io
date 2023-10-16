@@ -1,27 +1,66 @@
 import React, { Component } from 'react';
-import thoughts from '../data/thoughts.md';
-import ReactMarkdown from "react-markdown";
+import LazyLoad from 'react-lazyload';
+import ReactMarkdown from 'react-markdown';
 
+const importAll = (r) => r.keys().map(r);
+const markdownFiles = importAll(require.context('../data', false, /\.md$/))
+    .sort()
+    .reverse();
+
+function parseMetadata(text) {
+    const metadata = {};
+    const lines = text.split('\n');
+    let i = 0;
+    try {
+        while (i < lines.length && lines[i].startsWith('<!--')) {
+            i++;
+            while (i < lines.length && !lines[i].startsWith('-->')) {
+                const [key, value] = lines[i].split(':');
+                if (key && value) {
+                    metadata[key.trim()] = value.trim();
+                }
+                i++;
+            }
+        }
+    } catch (error) {
+        console.error('Error parsing metadata:', error);
+    }
+    return metadata;
+}
 
 export default class Articles extends Component {
     constructor(props) {
         super(props);
-        // State of your application
         this.state = {
             loading: true,
-            markdown: "",
             articles: [],
             error: null,
         };
         this.abortController = new AbortController();
     }
 
-    // Fetch your articles immediately after the component is mounted
     componentDidMount = async () => {
         try {
-            const response = await fetch(thoughts, { signal: this.abortController.signal });
-            const text = await response.text();
-            this.setState({ markdown: text, loading: false });
+            const articles = await Promise.all(
+                markdownFiles.map(async (file) => {
+                    const response = await fetch(file);
+                    const text = await response.text();
+                    const metadata = parseMetadata(text);
+                    return { text, metadata };
+                })
+            );
+            const sortedArticles = articles.sort((a, b) => {
+                const aDate = new Date(a.metadata.date);
+                const bDate = new Date(b.metadata.date);
+                if (aDate > bDate) {
+                    return -1;
+                } else if (aDate < bDate) {
+                    return 1;
+                } else {
+                    return a.metadata.title.localeCompare(b.metadata.title);
+                }
+            });
+            this.setState({ articles: sortedArticles, loading: false });
         } catch (error) {
             if (error.name === 'AbortError') {
                 console.log('Fetch aborted');
@@ -29,13 +68,14 @@ export default class Articles extends Component {
                 this.setState({ error });
             }
         }
-    }
+    };
 
     componentWillUnmount() {
         this.abortController.abort();
     }
 
     render() {
+        const { articles } = this.state;
 
         if (!this.state.loading) {
             return (
@@ -48,9 +88,20 @@ export default class Articles extends Component {
                             </div>
                             <div className="Articles">
                                 <div className="ArticlesList-container">
-                                    <div className="ArticlesList-article">
-                                        <ReactMarkdown children={this.state.markdown} />
-                                    </div>
+                                    {articles.map((article, index) => (
+                                        <LazyLoad key={index} height={200}>
+                                            <div className="article" key={index}>
+                                                <div className="article-header">
+                                                    <h1> {article.metadata.title}</h1>
+                                                </div>
+                                                <div className='article-body'>
+                                                    <ReactMarkdown children={article.text} skipHtml={true}
+                                                        escapeHtml={true} />
+                                                    <p>Published: {article.metadata.date}</p>
+                                                </div>
+                                            </div>
+                                        </LazyLoad>
+                                    ))}
                                 </div>
                             </div>
                         </div>
