@@ -91,25 +91,41 @@ export default class Articles extends Component {
                     {/* ======= Articles Section ======= */}
                     <section id="articles" className="articles">
                         <div className="container">
-                            <div className="section-title">
-                                <h2>Thoughts</h2>
-                            </div>
-                            <div className="Articles">
-                                <div className="ArticlesList-container">
-                                    {articles.map((article, index) => (
-                                        <LazyLoad key={index} height={200}>
-                                            <div className="article" key={index}>
-                                                <div className="article-header">
-                                                    <h1> {article.metadata.title}</h1>
+                            <div className="row">
+                                <div className="col-md-8">
+                                    <div className="section-title">
+                                        <h2>Articles</h2>
+                                    </div>
+                                    <div className="articles-container">
+                                        {articles.map((article, index) => (
+                                            <LazyLoad key={index} height={200}>
+                                                <div id={`article-${index}`} className="article" key={index}>
+                                                    <div className="article-header">
+                                                        <h1> {article.metadata.title}</h1>
+                                                    </div>
+                                                    <div className='article-body'>
+                                                        <ReactMarkdown children={article.text} skipHtml={true}
+                                                            escapeHtml={true} />
+                                                        <p>Published: {article.metadata.date}</p>
+                                                    </div>
                                                 </div>
-                                                <div className='article-body'>
-                                                    <ReactMarkdown children={article.text} skipHtml={true}
-                                                        escapeHtml={true} />
-                                                    <p>Published: {article.metadata.date}</p>
-                                                </div>
-                                            </div>
-                                        </LazyLoad>
-                                    ))}
+                                            </LazyLoad>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className="col-md-4">
+                                    <div className="section-title">
+                                        <h2>Article List</h2>
+                                    </div>
+                                    <div className="article-list">
+                                        <ul>
+                                            {articles.map((article, index) => (
+                                                <li key={index}>
+                                                    <a href={`#article-${index}`}>{article.metadata.title}</a>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>

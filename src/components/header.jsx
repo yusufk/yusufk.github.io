@@ -60,7 +60,7 @@ export default class Header extends Component {
                                 </li>
                                 {<li>
                                     <a className="nav-link" href="#articles">
-                                        Thoughts
+                                        Articles
                                     </a>
                                 </li>}
                             </ul>
