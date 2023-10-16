@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import axios from 'axios';
-import ReactMarkdown from 'react-markdown'
+import React, { Component } from 'react';
+import thoughts from '../data/thoughts.md';
+import ReactMarkdown from "react-markdown";
+
 
 export default class Articles extends Component {
     constructor(props) {
@@ -8,61 +9,56 @@ export default class Articles extends Component {
         // State of your application
         this.state = {
             loading: true,
+            markdown: "",
             articles: [],
             error: null,
         };
+        this.abortController = new AbortController();
     }
 
     // Fetch your articles immediately after the component is mounted
     componentDidMount = async () => {
-        const token = process.env.REACT_APP_CMS_TOKEN;
-        const config = {
-            headers: { Authorization: `Bearer ${token}` }
-        };
         try {
-            const response = await axios.get('https://cms.kaka.co.za/api/articles', config);
-            this.setState({ articles: response.data, loading: false });
+            const response = await fetch(thoughts, { signal: this.abortController.signal });
+            const text = await response.text();
+            this.setState({ markdown: text, loading: false });
         } catch (error) {
-            this.setState({ error });
+            if (error.name === 'AbortError') {
+                console.log('Fetch aborted');
+            } else {
+                this.setState({ error });
+            }
         }
-    };
+    }
+
+    componentWillUnmount() {
+        this.abortController.abort();
+    }
 
     render() {
 
         if (!this.state.loading) {
-            // Sort articles by publishedAt in descending order
-            const sortedArticles = this.state.articles.data.sort((a, b) => {
-                return new Date(b.attributes.publishedAt) - new Date(a.attributes.publishedAt);
-            });
-
             return (
                 <div>
                     {/* ======= Articles Section ======= */}
                     <section id="articles" className="articles">
                         <div className="container">
                             <div className="section-title">
-                                <h2>Thoughts ({sortedArticles.length})</h2>
+                                <h2>Thoughts</h2>
                             </div>
                             <div className="Articles">
                                 <div className="ArticlesList-container">
-                                    {sortedArticles.map((article, index) => {
-                                        const pubDate = new Date(article.attributes.publishedAt);
-                                        return (
-                                            <div className="ArticlesList-article" key={article.id}>
-                                                <h3>{article.attributes.Title}</h3>
-                                                <ReactMarkdown children={article.attributes.Body} />
-                                                <p>Published: {pubDate.toLocaleString()}</p>
-                                                <hr />
-                                            </div>
-                                        );
-                                    })}
+                                    <div className="ArticlesList-article">
+                                        <ReactMarkdown children={this.state.markdown} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
                 </div>
             );
+        } else {
+            return <div>Loading...</div>;
         }
-        return <div>Loading...</div>;
     }
 }
