@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import LazyLoad from 'react-lazyload';
 import ReactMarkdown from 'react-markdown';
 
-const importAll = (r) => r.keys().map(r);
-const markdownFiles = importAll(require.context('../data', false, /\.md$/))
-    .sort()
-    .reverse();
-
 function parseMetadata(text) {
     const metadata = {};
     const lines = text.split('\n');
@@ -28,6 +23,18 @@ function parseMetadata(text) {
     return metadata;
 }
 
+async function importAllMarkdownFiles() {
+    const context = require.context('/data', false, /\.md$/);
+    const keys = context.keys();
+    const markdownFiles = await Promise.all(
+        keys.map(async (key) => {
+            const module = await import(`/data/${key.slice(2)}`);
+            return module.default;
+        })
+    );
+    return markdownFiles;
+}
+
 export default class Articles extends Component {
     constructor(props) {
         super(props);
@@ -41,6 +48,7 @@ export default class Articles extends Component {
 
     componentDidMount = async () => {
         try {
+            const markdownFiles = await importAllMarkdownFiles();
             const articles = await Promise.all(
                 markdownFiles.map(async (file) => {
                     const response = await fetch(file);

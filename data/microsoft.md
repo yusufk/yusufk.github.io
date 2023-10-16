@@ -1,6 +1,6 @@
 <!--
 title: My year at Microsoft
-date: 24/09/2023, 22:43:06
+date: 2023-08-21
 --->
 
 It's been over a year since I've paid any attention to this site, but for good reason. The last 13 month's have been crazy. After 16 years at MTN, I joined Microsoft's Africa Transformation Office, as a Tech-Lead for the start-ups and SME (small business) pillars.

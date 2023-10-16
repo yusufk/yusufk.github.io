@@ -1,6 +1,6 @@
 <!--
 title: If
-date: 24/09/2023, 22:43:06
+date: 2023-09-24
 -->
 > If you can code and not make bugs your kin, If you can Git commit and push with ease, If you can work in Agile's fast-paced spin, And never miss a daily standup, please;
 > 
