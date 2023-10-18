@@ -713,11 +713,22 @@ section .container {
   margin-bottom: 20px;
 }
 
+.repos .icon-box h4 {
+  color: #18d24a;
+}
+
+.calrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .repos .icon-box .icon {
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: #1888d2;
+  background: #18d24a;
   border-radius: 5px;
   transition: all 0.3s ease-out 0s;
   display: flex;
@@ -762,8 +773,8 @@ section .container {
 }
 
 .repos .icon-box:hover {
-  background: #062f4a;
-  border-color: #1888d2;
+  background: #064a06;
+  border-color: #18d256;
 }
 
 .repos .icon-box:hover .icon {
@@ -771,11 +782,11 @@ section .container {
 }
 
 .repos .icon-box:hover .icon i {
-  color: #1888d2;
+  color: #18d231;
 }
 
 .repos .icon-box:hover .icon::before {
-  background: #045c96;
+  background: #049643;
 }
 
 .repos .icon-box:hover h4 a,

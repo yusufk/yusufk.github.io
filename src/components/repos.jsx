@@ -14,7 +14,7 @@ export default class Repositories extends Component {
     componentDidMount() {
         const token = process.env.REACT_APP_GITHUB_TOKEN;
         const config = {
-            headers: { Authorization: `Bearer ${token}` }
+            //headers: { Authorization: `Bearer ${token}` }
         };
 
         fetch('https://api.github.com/users/yusufk/repos', config)
@@ -30,6 +30,10 @@ export default class Repositories extends Component {
     render() {
         const { repos, loading, error } = this.state;
 
+        if (error) {
+            return <div>Error: {error}</div>;
+        }
+
         return (
             <section id="repos" className="repos">
                 <div className="container">
@@ -37,15 +41,14 @@ export default class Repositories extends Component {
                         <h2>Repositories</h2>
                     </div>
                     <div className="row">
-                        <div className="col-lg-12">
+                        <div className="col-lg-12 calrow">
                             <GitHubCalendar username="yusufk" />
                         </div>
                     </div>
                     <div className="row">
                         {loading && <div>Loading...</div>}
-                        {error && <div>Error: {error}</div>}
-                        {repos.map(repo => (
-                            <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" key={repo.id}>
+                        {Array.isArray(repos) && repos.map(repo => (
+                            <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" key={repo.id}>
                                 <div className="icon-box">
                                     <a href={repo.html_url}>
                                         <div className="icon">
@@ -58,6 +61,9 @@ export default class Repositories extends Component {
                             </div>
                         ))}
                     </div>
+                    <p>More source code repos can be found <a href="https://github.com/yusufk/">here</a>, <a href="https://bitbucket.org/mitpeople/">here</a> and <a href="https://gitlab.com/yusufk">here</a>.</p>
+                    <p>Also, find me on <a href="https://stackoverflow.com/users/241449/yusufk">StackOverflow.</a></p>
+                    
                 </div>
             </section>
         );
