@@ -140,7 +140,7 @@ export default class Resume extends Component {
                                         <li>Within 3 years, modernised and stabilised the environment, bringing it in line with MTN standards and improving delivery efficiency and productivity.</li>
                                     </ul>
                                 </div>
-                                <div class="resume-item">
+                                <div className="resume-item">
                                     <h4>Senior Manager: Technology Innovation</h4>
                                     <h5>Dec 2011 - Nov 2014 · 3 yrs</h5>
                                     <p>Johannesburg Area, South Africa</p>
@@ -155,7 +155,7 @@ export default class Resume extends Component {
                                     </ul>
                                 </div>
 
-                                <div class="resume-item">
+                                <div className="resume-item">
                                     <h4>Manager - VAS Messaging and Service Exposure</h4>
                                     <h5>May 2011 - Nov 2011 · 7 mos</h5>
                                     <p>Responsible for leading a delivery team developing products and general technical planning of services in line with business requirements and budgetary priorities within VAS Area. Also responsible for Architecture of in-house developed systems, Specification of procured systems and Capacity Planning of all systems which deliver these services are also within the teams responsibility. These systems include the SMSC, MMSC, USSD Gateway, WAP Gateway, IM platform, LBS platform and other supporting systems.</p>
@@ -166,7 +166,7 @@ export default class Resume extends Component {
                                     </ul>
                                 </div>
 
-                                <div class="resume-item">
+                                <div className="resume-item">
                                     <h4>Senior Systems Engineer</h4>
                                     <h5>Sep 2007 - Apr 2011 · 3 yrs 8 mos</h5>
                                     <p>Responsible for planning, architecture and implementation of customer facing products and services in the VAS Messaging area.</p>
@@ -179,7 +179,7 @@ export default class Resume extends Component {
                                     </ul>
                                 </div>
 
-                                <div class="resume-item">
+                                <div className="resume-item">
                                     <h4>Systems Engineer</h4>
                                     <h5>Jul 2006 - Aug 2007 · 1 yr 2 mos</h5>
                                     <p>Responsible for planning, architecture and implementation of customer facing products and services in the VAS Messaging area.</p>
