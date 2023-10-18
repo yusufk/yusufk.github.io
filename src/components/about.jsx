@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // Use an image
-import me from '../img/me_screen.png'
+import me from '../img/Lightbulb Yusuf.jpg'
 
 export default class About extends Component {
 
