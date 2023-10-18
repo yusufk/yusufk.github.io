@@ -1,0 +1,230 @@
+{
+    "data": [
+        {
+            "id": 5,
+            "attributes": {
+                "Title": "Fire and Water",
+                "Slug": "fire-and-water",
+                "Description": "Supposedly a description of my character, drawn by a Kung Fu master. Supposedly, because he took all of 5 seconds to know my character.",
+                "URL": "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/96575051771539935017186713945733009438682784717990966492482054547781242060801/",
+                "MediaURL": "https://yusufkakacoza.s3.eu-west-1.amazonaws.com/Fs_Awm_N_Md_Ajh_C_Aj_K_Bs_Z_Ew_Wve_R_Mr_Q_3_FC_8_ZA_0_X_Sr_BZ_7_AN_0u_SDP_g_Wf2qr24_NA_Us_Cc_Obxdvm_C8ic_Vhvnf_Hff44_Hvzipf_Mw_BF_Do9_MAP_s0_9039dcf083",
+                "createdAt": "2022-04-06T15:09:35.995Z",
+                "updatedAt": "2022-08-29T12:22:26.548Z",
+                "publishedAt": "2022-04-06T15:11:14.346Z",
+                "Media": {
+                    "data": null
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 2,
+                            "attributes": {
+                                "Category": "NFT",
+                                "Slug": "nft",
+                                "createdAt": "2022-04-06T12:24:58.579Z",
+                                "updatedAt": "2022-08-22T10:32:02.977Z",
+                                "publishedAt": "2022-04-06T12:25:02.269Z"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 8,
+            "attributes": {
+                "Title": "Inception",
+                "Slug": "ince",
+                "Description": "A 3D model of the inception spinning totem.",
+                "URL": "https://openseauserdata.com/files/b68884405faf6fe7cd7b95551fd0a05a.mp4",
+                "MediaURL": "https://yusufkakacoza.s3.eu-west-1.amazonaws.com/inception_2e5d3c0137.jpg",
+                "createdAt": "2022-05-04T08:45:13.018Z",
+                "updatedAt": "2022-08-22T10:32:00.803Z",
+                "publishedAt": "2022-05-16T09:32:48.933Z",
+                "Media": {
+                    "data": null
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 2,
+                            "attributes": {
+                                "Category": "NFT",
+                                "Slug": "nft",
+                                "createdAt": "2022-04-06T12:24:58.579Z",
+                                "updatedAt": "2022-08-22T10:32:02.977Z",
+                                "publishedAt": "2022-04-06T12:25:02.269Z"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 9,
+            "attributes": {
+                "Title": "Shanghai Crystal Ball",
+                "Slug": "shna",
+                "Description": "A 3d-model of a crystal ball, placed in Shanghai.",
+                "URL": "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/96575051771539935017186713945733009438682784717990966492482054641239730421761/",
+                "MediaURL": "https://yusufkakacoza.s3.eu-west-1.amazonaws.com/crystal_ball_blue_metal_glass_shanghai_d6428d5576.png",
+                "createdAt": "2022-05-16T09:37:18.345Z",
+                "updatedAt": "2022-11-26T10:37:58.432Z",
+                "publishedAt": "2022-05-16T09:37:21.197Z",
+                "Media": {
+                    "data": null
+                },
+                "categories": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 10,
+            "attributes": {
+                "Title": "Spring Jasmines",
+                "Slug": "spring",
+                "Description": "Close-up photo of Jasmines in bloom.",
+                "URL": "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/96575051771539935017186713945733009438682784717990966492482054631344125771777/",
+                "MediaURL": "https://lh3.googleusercontent.com/0pRxg83lDIL4DdBcGwTg2EJrJ4swkIotG0Hbavxh4EvU0FrRUproVDuAojwzg2hgqJORooqu5t62dS9Cd14XXVrkLBWvOFQBTvfNXoU=w600",
+                "createdAt": "2022-05-16T09:40:24.039Z",
+                "updatedAt": "2022-08-22T10:32:01.235Z",
+                "publishedAt": "2022-05-16T09:40:26.106Z",
+                "Media": {
+                    "data": null
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 2,
+                            "attributes": {
+                                "Category": "NFT",
+                                "Slug": "nft",
+                                "createdAt": "2022-04-06T12:24:58.579Z",
+                                "updatedAt": "2022-08-22T10:32:02.977Z",
+                                "publishedAt": "2022-04-06T12:25:02.269Z"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 11,
+            "attributes": {
+                "Title": "Probat coffee roasting",
+                "Slug": "pr-1",
+                "Description": "You can almost smell the warm roast!",
+                "URL": "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/96575051771539935017186713945733009438682784717990966492482054588463172288513/",
+                "MediaURL": "https://lh3.googleusercontent.com/Qjc4iJuUnxqpYoyesJlU-pRbV1bw4NHrLMrTHLAGAkoSINypsgNeXPVSSJ8dP04wnGDdEMfWUrFJzncFwhW6HF_Bbb7Z1GhQCC4z56A=w600",
+                "createdAt": "2022-05-16T09:42:01.392Z",
+                "updatedAt": "2022-08-22T10:32:01.668Z",
+                "publishedAt": "2022-05-16T09:42:03.291Z",
+                "Media": {
+                    "data": null
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 2,
+                            "attributes": {
+                                "Category": "NFT",
+                                "Slug": "nft",
+                                "createdAt": "2022-04-06T12:24:58.579Z",
+                                "updatedAt": "2022-08-22T10:32:02.977Z",
+                                "publishedAt": "2022-04-06T12:25:02.269Z"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 12,
+            "attributes": {
+                "Title": "Ice Phoenix",
+                "Slug": "ice-p",
+                "Description": "An edited photo of a cool cloud formation.",
+                "URL": "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/96575051771539935017186713945733009438682784717990966492482054640140218793985/",
+                "MediaURL": "https://lh3.googleusercontent.com/S6tKG6-SHItAtDQ1fKm9MLLVErEc9qWnuHFufrKd2LfQ0AxZ2j-ZdooeH5Ag1T1M0qAXoPpSRMyFh1R009aX1jFev45PtksDtycjntI=w600",
+                "createdAt": "2022-05-16T10:11:18.456Z",
+                "updatedAt": "2022-08-22T10:32:02.100Z",
+                "publishedAt": "2022-05-16T10:11:29.284Z",
+                "Media": {
+                    "data": null
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 2,
+                            "attributes": {
+                                "Category": "NFT",
+                                "Slug": "nft",
+                                "createdAt": "2022-04-06T12:24:58.579Z",
+                                "updatedAt": "2022-08-22T10:32:02.977Z",
+                                "publishedAt": "2022-04-06T12:25:02.269Z"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 13,
+            "attributes": {
+                "Title": "Fields of Gold",
+                "Slug": "fields",
+                "Description": "Golden fields in the Drakensburg",
+                "URL": "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/96575051771539935017186713945733009438682784717990966492482054621448521121793/",
+                "MediaURL": "https://lh3.googleusercontent.com/zcTWb6Ht5LGJY4B0OLPohqJvSFZRVEdko-Q21tJaaB3RH1glocOCEZ1_zGYJhOqa7fbgDCFMUM25J2AZf-7O2c2rK-tsa63KQ9wXN_g=w600",
+                "createdAt": "2022-05-16T10:12:41.669Z",
+                "updatedAt": "2022-08-22T10:32:02.533Z",
+                "publishedAt": "2022-05-16T10:12:49.579Z",
+                "Media": {
+                    "data": null
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 2,
+                            "attributes": {
+                                "Category": "NFT",
+                                "Slug": "nft",
+                                "createdAt": "2022-04-06T12:24:58.579Z",
+                                "updatedAt": "2022-08-22T10:32:02.977Z",
+                                "publishedAt": "2022-04-06T12:25:02.269Z"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 14,
+            "attributes": {
+                "Title": "Shoalin Kids of SF",
+                "Slug": "sho",
+                "Description": "One of my favourite pics taken on a whirlwind foot-tour of San Francisco.",
+                "URL": "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/96575051771539935017186713945733009438682784717990966492482054639040707166209/",
+                "MediaURL": "https://lh3.googleusercontent.com/uhAsAGXFiobMCnOafE5XtTLnDythuUyMBMKw4NNW3_C2MtUmdyYht_VycHZGir-FLpMnlB41tB3pJ_t9WQZxhHap49EZb-2YQvTgKnI=w600",
+                "createdAt": "2022-05-16T10:21:02.177Z",
+                "updatedAt": "2022-08-22T10:31:07.973Z",
+                "publishedAt": "2022-05-16T10:21:03.844Z",
+                "Media": {
+                    "data": null
+                },
+                "categories": {
+                    "data": []
+                }
+            }
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 8
+        }
+    }
+}

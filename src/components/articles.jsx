@@ -24,11 +24,11 @@ function parseMetadata(text) {
 }
 
 async function importAllMarkdownFiles() {
-    const context = require.context('/data', false, /\.md$/);
+    const context = require.context('/data/articles', false, /\.md$/);
     const keys = context.keys();
     const markdownFiles = await Promise.all(
         keys.map(async (key) => {
-            const module = await import(`/data/${key.slice(2)}`);
+            const module = await import(`/data/articles/${key.slice(2)}`);
             return module.default;
         })
     );
@@ -104,8 +104,7 @@ export default class Articles extends Component {
                                                         <h1> {article.metadata.title}</h1>
                                                     </div>
                                                     <div className='article-body'>
-                                                        <ReactMarkdown children={article.text} skipHtml={true}
-                                                            escapeHtml={true} />
+                                                        <ReactMarkdown children={article.text} skipHtml={true}/>
                                                         <p>Published: {article.metadata.date}</p>
                                                     </div>
                                                 </div>

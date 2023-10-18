@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-//import { Waypoint } from 'react-waypoint';
+// Use an image
+import me from '../img/me_screen.png'
 
 export default class About extends Component {
 
@@ -11,24 +12,23 @@ export default class About extends Component {
                     {/* ======= About Me ======= */}
                     <div className="about-me container">
                         <div className="section-title">
-                            <h2>About</h2>
-                            <p>Learn more about me</p>
+                            <h2>whoami</h2>
                         </div>
                         <div className="row">
                             <div className="col-lg-4" data-aos="fade-right">
-                                <img src={require("../img/memoji mac.webp")} className="img-fluid" alt="" />
+                                <img src={me} className="img-fluid" alt="" />
                             </div>
                             <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                                <h3>Specialist: Digital | Telco | Messaging </h3>
+                                <h3>Technology Leadership | Product Development | Innovation Management</h3>
                                 <p className="fst-italic">
-                                    &gt; 20 years of experience in the mobile technology, software development, digital channels, telecommunications and messaging.
+                                    Accomplished technologist with 20+ years of experience in co-creating and delivering large-scale products, services, and systems. Recognised for driving innovation through strategic programs and finding creative solutions to complex technical challenges.
                                 </p>
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <ul>
                                             <li>
                                                 <i className="bi bi-chevron-right" />{" "}
-                                                <strong>Website:</strong> <span>yusuf.kaka.co.za</span>
+                                                <strong>Web:</strong> <a href="https://yusuf.kaka.co.za">You're here</a>
                                             </li>
                                             <li>
                                                 <i className="bi bi-chevron-right" /> <strong>City:</strong>{" "}
@@ -40,11 +40,11 @@ export default class About extends Component {
                                         <ul>
                                             <li>
                                                 <i className="bi bi-chevron-right" /> <strong>Age:</strong>{" "}
-                                                <span>43</span>
+                                                <del><span>45</span></del>&nbsp;&nbsp;&nbsp;&nbsp;18
                                             </li>
                                             <li>
-                                                <i className="bi bi-chevron-right" /> <strong>Degree:</strong>{" "}
-                                                <span>Engineering</span>
+                                                <i className="bi bi-chevron-right" /> <strong>Qualification:</strong>{" "}
+                                                <span>B.Sc. Engineering <a href="https://www.wits.ac.za">@wits</a></span>
                                             </li>
                                             <li>
                                                 <i className="bi bi-chevron-right" />{" "}
@@ -54,9 +54,7 @@ export default class About extends Component {
                                     </div>
                                 </div>
                                 <p>
-                                    Life is short, and there is a limit to what can be achieved in the time
-                                    that we've been gifted. Technology gives us the ability to make an impact at scale, maximising what we can achieve in that short time.
-                                    I strive to focus my creativity, technical skills and curiosity on maximising positive impact on society.
+                                    My mission is to harness technology for the benefit of humanity. I am passionate about technology and its ability to positively impact lives.
                                 </p>
                             </div>
                         </div>
@@ -141,7 +139,7 @@ export default class About extends Component {
                                 </div>
                                 <div className="progress">
                                     <span className="skill">
-                                        Mobile app and Web development <i className="val">18 years</i>
+                                        Mobile app and Web development <i className="val">20 years</i>
                                     </span>
                                     <div className="progress-bar-wrap">
                                         <div
@@ -188,16 +186,16 @@ export default class About extends Component {
                                 </div>
                                 <div className="progress">
                                     <span className="skill">
-                                        Product Development <i className="val">3 years</i>
+                                        Product Development <i className="val">15 years</i>
                                     </span>
                                     <div className="progress-bar-wrap">
                                         <div
                                             className="progress-bar"
                                             role="progressbar"
-                                            aria-valuenow={60}
+                                            aria-valuenow={90}
                                             aria-valuemin={0}
                                             aria-valuemax={100}
-                                            style={{ "width": "60%" }}
+                                            style={{ "width": "90%" }}
                                         />
                                     </div>
                                 </div>
