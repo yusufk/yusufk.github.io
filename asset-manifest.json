@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f4d0f187.css",
-    "main.js": "/static/js/main.ce8a134a.js",
+    "main.js": "/static/js/main.79898f40.js",
     "static/js/787.f1fe27d6.chunk.js": "/static/js/787.f1fe27d6.chunk.js",
     "static/media/bg.png": "/static/media/bg.f4b3a885f6f1b2222afa.png",
     "static/media/remixicon.svg?t=1590207869815": "/static/media/remixicon.9cedd2150922ead84869.svg",
@@ -22,16 +22,17 @@
     "static/media/testimonials-3.jpg": "/static/media/testimonials-3.89de2442560d1ac2ba38.jpg",
     "static/media/testimonials-1.jpg": "/static/media/testimonials-1.ee9bf300afd176160f6e.jpg",
     "static/media/testimonials-4.jpg": "/static/media/testimonials-4.cb424233cbb43f6348b6.jpg",
-    "static/media/microsoft.md": "/static/media/microsoft.3b049891ceac69357ec6.md",
+    "static/media/microsoft.md": "/static/media/microsoft.03253c069e939762d3d7.md",
     "static/media/azure.md": "/static/media/azure.82af2b839f9fee684045.md",
     "static/media/if.md": "/static/media/if.c8ff8e91d355657c8a92.md",
     "index.html": "/index.html",
+    "static/media/nft.md": "/static/media/nft.2c8f029d16b03f29e302.md",
     "main.f4d0f187.css.map": "/static/css/main.f4d0f187.css.map",
-    "main.ce8a134a.js.map": "/static/js/main.ce8a134a.js.map",
+    "main.79898f40.js.map": "/static/js/main.79898f40.js.map",
     "787.f1fe27d6.chunk.js.map": "/static/js/787.f1fe27d6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f4d0f187.css",
-    "static/js/main.ce8a134a.js"
+    "static/js/main.79898f40.js"
   ]
 }
