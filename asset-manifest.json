@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.3997a651.css",
-    "main.js": "/static/js/main.744f2a37.js",
+    "main.js": "/static/js/main.615f023a.js",
     "static/js/787.f1fe27d6.chunk.js": "/static/js/787.f1fe27d6.chunk.js",
+    "static/media/me_screen.png": "/static/media/me_screen.256b47911e340f68dcd6.png",
     "static/media/remixicon.svg?t=1590207869815": "/static/media/remixicon.9cedd2150922ead84869.svg",
     "static/media/boxicons.svg": "/static/media/boxicons.17f6cb4eef77f07f2caa.svg",
     "static/media/remixicon.eot?t=1590207869815": "/static/media/remixicon.5cb99e6cba5a4619063f.eot",
@@ -21,17 +22,16 @@
     "static/media/testimonials-3.jpg": "/static/media/testimonials-3.89de2442560d1ac2ba38.jpg",
     "static/media/testimonials-1.jpg": "/static/media/testimonials-1.ee9bf300afd176160f6e.jpg",
     "static/media/testimonials-4.jpg": "/static/media/testimonials-4.cb424233cbb43f6348b6.jpg",
-    "static/media/memoji mac.webp": "/static/media/memoji mac.42153a89c869b0791eeb.webp",
     "static/media/microsoft.md": "/static/media/microsoft.3b049891ceac69357ec6.md",
     "static/media/azure.md": "/static/media/azure.82af2b839f9fee684045.md",
     "static/media/if.md": "/static/media/if.c8ff8e91d355657c8a92.md",
     "index.html": "/index.html",
     "main.3997a651.css.map": "/static/css/main.3997a651.css.map",
-    "main.744f2a37.js.map": "/static/js/main.744f2a37.js.map",
+    "main.615f023a.js.map": "/static/js/main.615f023a.js.map",
     "787.f1fe27d6.chunk.js.map": "/static/js/787.f1fe27d6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3997a651.css",
-    "static/js/main.744f2a37.js"
+    "static/js/main.615f023a.js"
   ]
 }
