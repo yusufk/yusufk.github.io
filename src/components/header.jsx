@@ -49,13 +49,13 @@ export default class Header extends Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="nav-link" href="#repos">
-                                        Repositories
+                                    <a className="nav-link" href="#articles">
+                                        Articles
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="nav-link" href="#articles">
-                                        Articles
+                                    <a className="nav-link" href="#repos">
+                                        Repositories
                                     </a>
                                 </li>
                             </ul>
