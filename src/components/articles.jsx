@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LazyLoad from 'react-lazyload';
 import ReactMarkdown from 'react-markdown';
+import { BlobServiceClient } from '@azure/storage-blob';
 
 function parseMetadata(text) {
     const metadata = {};
@@ -23,18 +24,6 @@ function parseMetadata(text) {
     return metadata;
 }
 
-async function importAllMarkdownFiles() {
-    const context = require.context('/data/articles', false, /\.md$/);
-    const keys = context.keys();
-    const markdownFiles = await Promise.all(
-        keys.map(async (key) => {
-            const module = await import(`/data/articles/${key.slice(2)}`);
-            return module.default;
-        })
-    );
-    return markdownFiles;
-}
-
 export default class Articles extends Component {
     constructor(props) {
         super(props);
@@ -47,35 +36,41 @@ export default class Articles extends Component {
     }
 
     componentDidMount = async () => {
+        const containerUrl = 'https://yusufkakacozastorageacc.blob.core.windows.net/';
+        const blobServiceClient = new BlobServiceClient(containerUrl);
+        const containerClient = blobServiceClient.getContainerClient("yusufkakacoza");
+        const blobItems = containerClient.listBlobsFlat();
+
+        const markdownFiles = [];
         try {
-            const markdownFiles = await importAllMarkdownFiles();
-            const articles = await Promise.all(
-                markdownFiles.map(async (file) => {
-                    const response = await fetch(file);
-                    const text = await response.text();
-                    const metadata = parseMetadata(text);
-                    return { text, metadata };
-                })
-            );
-            const sortedArticles = articles.sort((a, b) => {
-                const aDate = new Date(a.metadata.date);
-                const bDate = new Date(b.metadata.date);
-                if (aDate > bDate) {
-                    return -1;
-                } else if (aDate < bDate) {
-                    return 1;
-                } else {
-                    return a.metadata.title.localeCompare(b.metadata.title);
+            for await (const blobItem of blobItems) {
+                console.log(`Blob: ${blobItem.name}`);
+                if (blobItem.name.endsWith('.md')) {
+                    const blobClient = containerClient.getBlobClient(blobItem.name);
+                    console.log(`BlobClient: ${blobClient.url}`);
+                    // Get the file from Azure Storage from URL
+                    const blobDownloadResponse = await blobClient.download(this.abortController.signal);
+                    const blob = await blobDownloadResponse.blobBody;
+                    const markdownText = await blob.text();
+                    const metadata = parseMetadata(markdownText.toString('utf8'));
+                    markdownFiles.push({
+                        text: markdownText,
+                        metadata: metadata,
+                    });
                 }
-            });
-            this.setState({ articles: sortedArticles, loading: false });
-        } catch (error) {
-            if (error.name === 'AbortError') {
-                console.log('Fetch aborted');
-            } else {
-                this.setState({ error });
             }
+            // Sort the markdownFiles array by date in descending order
+            markdownFiles.sort((a, b) => new Date(b.metadata.date) - new Date(a.metadata.date));
+        } catch (error) {
+            markdownFiles.push({
+                text: "Error loading articles...",
+                metadata: {
+                    title: "Error loading articles...",
+                    date: new Date().toISOString().slice(0, 10),
+                },
+            });
         }
+        this.setState({ articles: markdownFiles, loading: false });
     };
 
     componentWillUnmount() {
@@ -104,7 +99,7 @@ export default class Articles extends Component {
                                                         <h1> {article.metadata.title}</h1>
                                                     </div>
                                                     <div className='article-body'>
-                                                        <ReactMarkdown children={article.text} skipHtml={true}/>
+                                                        <ReactMarkdown children={article.text} skipHtml={true} />
                                                         <p>Published: {article.metadata.date}</p>
                                                     </div>
                                                 </div>

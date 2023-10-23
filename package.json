@@ -4,6 +4,7 @@
   "homepage": "https://yusuf.kaka.co.za",
   "private": true,
   "dependencies": {
+    "@azure/storage-blob": "^12.16.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
