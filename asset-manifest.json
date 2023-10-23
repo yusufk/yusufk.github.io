@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.f4d0f187.css",
-    "main.js": "/static/js/main.3e5ca4a9.js",
+    "main.css": "/static/css/main.7e379c83.css",
+    "main.js": "/static/js/main.ab7bb2d2.js",
     "static/js/787.f1fe27d6.chunk.js": "/static/js/787.f1fe27d6.chunk.js",
-    "static/media/bg.png": "/static/media/bg.f4b3a885f6f1b2222afa.png",
+    "static/media/Yusuf-Lightbulb.gif": "/static/media/Yusuf-Lightbulb.5c036286796452e82c74.gif",
+    "static/media/cappuccino_yusuf.png": "/static/media/cappuccino_yusuf.ea1bd467b9a01a7839b2.png",
     "static/media/remixicon.svg?t=1590207869815": "/static/media/remixicon.9cedd2150922ead84869.svg",
     "static/media/boxicons.svg": "/static/media/boxicons.17f6cb4eef77f07f2caa.svg",
     "static/media/remixicon.eot?t=1590207869815": "/static/media/remixicon.5cb99e6cba5a4619063f.eot",
@@ -16,23 +17,18 @@
     "static/media/remixicon.woff2?t=1590207869815": "/static/media/remixicon.90668f6f9b3c2c18a090.woff2",
     "static/media/boxicons.woff2": "/static/media/boxicons.60f603cccbdff82a523c.woff2",
     "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.a13b815539b49de48d23.woff2",
-    "static/media/Lightbulb Yusuf.jpg": "/static/media/Lightbulb Yusuf.8299edab84fc90e7798e.jpg",
     "static/media/testimonials-2.jpg": "/static/media/testimonials-2.d80657ce506b2d85e68a.jpg",
     "static/media/testimonials-5.jpg": "/static/media/testimonials-5.eafde485a03e4d2bc795.jpg",
     "static/media/testimonials-3.jpg": "/static/media/testimonials-3.89de2442560d1ac2ba38.jpg",
     "static/media/testimonials-1.jpg": "/static/media/testimonials-1.ee9bf300afd176160f6e.jpg",
     "static/media/testimonials-4.jpg": "/static/media/testimonials-4.cb424233cbb43f6348b6.jpg",
-    "static/media/microsoft.md": "/static/media/microsoft.03253c069e939762d3d7.md",
-    "static/media/azure.md": "/static/media/azure.82af2b839f9fee684045.md",
-    "static/media/if.md": "/static/media/if.c8ff8e91d355657c8a92.md",
     "index.html": "/index.html",
-    "static/media/nft.md": "/static/media/nft.737ef83d76c5a4d2f2d7.md",
-    "main.f4d0f187.css.map": "/static/css/main.f4d0f187.css.map",
-    "main.3e5ca4a9.js.map": "/static/js/main.3e5ca4a9.js.map",
+    "main.7e379c83.css.map": "/static/css/main.7e379c83.css.map",
+    "main.ab7bb2d2.js.map": "/static/js/main.ab7bb2d2.js.map",
     "787.f1fe27d6.chunk.js.map": "/static/js/787.f1fe27d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4d0f187.css",
-    "static/js/main.3e5ca4a9.js"
+    "static/css/main.7e379c83.css",
+    "static/js/main.ab7bb2d2.js"
   ]
 }
