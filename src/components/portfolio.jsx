@@ -1,22 +1,28 @@
 import React, { Component } from 'react'
 const channelId = 'yusufkaka'; // Replace with your channel ID
-const from = 150; // First post
-const to = 141; // Last post
+const from = 155; // First post
+const imagesToShow = 9; // Last post
 
 export default class Portfolio extends Component {
     constructor(props) {
         super(props);
         // State of your application
         this.state = {
+            from: from,
+            imagesToShow: imagesToShow,
+            channelId: channelId,
             artloading: true,
             artworks: [],
             error: null,
         };
+        this.observer = null;
+        this.lastItemRef = React.createRef();
     }
 
-    componentDidMount() {
+    populateArt = (prevState) => {
+        const { from, imagesToShow, channelId } = prevState;
         const portfolioContainer = document.querySelector('.portfolio-container');
-        for (let i = from; i > to; i--) {
+        for (let i = from; i > from - imagesToShow; i--) {
             const script = document.createElement('script');
             script.src = 'https://telegram.org/js/telegram-widget.js?22';
             script.async = true;
@@ -30,6 +36,34 @@ export default class Portfolio extends Component {
             itemContainer.className = 'col-lg-4 col-md-6 portfolio-item filter-app';
             itemContainer.id = `portfolio-item-${i}`;
             portfolioContainer.appendChild(itemContainer);
+            this.lastItemRef.current = itemContainer;
+        }
+    };
+
+    handleObserver = (entries) => {
+        console.log('handleObserver called');
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry.isIntersecting) {
+            this.setState(
+                (prevState) => ({
+                    from: prevState.from - 9,
+                }),
+                () => {
+                    this.populateArt(this.state);
+                }
+            );
+        }
+    };
+
+    componentDidMount() {
+        this.populateArt(this.state);
+        this.observer = new IntersectionObserver(this.handleObserver, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 1.0,
+        });
+        if (this.lastItemRef.current) {
+            this.observer.observe(this.lastItemRef.current);
         }
         this.setState({ artloading: false });
     }
