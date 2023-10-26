@@ -77,7 +77,7 @@ export default class Portfolio extends Component {
                 <section id="portfolio" className="portfolio">
                     <div className="container">
                         <div className="section-title">
-                            <h2>Gallery</h2>
+                            <h2>Art</h2>
                             <h3>Curated art and my own pics</h3>
                         </div>
                         <div id="portfolio-container" className="row portfolio-container">

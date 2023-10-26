@@ -60,7 +60,7 @@ export default class Header extends Component {
                                 </li>
                                 <li>
                                     <a className="nav-link" href="#portfolio">
-                                        Portfolio
+                                        Digital Art
                                     </a>
                                 </li>
                             </ul>
