@@ -56,14 +56,19 @@ export default class Repositories extends Component {
                                         </div>
                                         <h4>{repo.name}</h4>
                                     </a>
-                                    <p>{repo.description}</p>
+                                    <p className="card-text">{repo.description}</p>
+                                    {repo.homepage && (
+                                        <a href={repo.homepage} target="_blank" rel="noopener noreferrer">
+                                            View Demo
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         ))}
                     </div>
                     <p>More source code repos can be found <a href="https://github.com/yusufk/">here</a>, <a href="https://bitbucket.org/mitpeople/">here</a> and <a href="https://gitlab.com/yusufk">here</a>.</p>
                     <p>Also, find me on <a href="https://stackoverflow.com/users/241449/yusufk">StackOverflow.</a></p>
-                    
+
                 </div>
             </section>
         );
