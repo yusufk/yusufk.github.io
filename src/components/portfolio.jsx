@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 const channelId = 'yusufkaka'; // Replace with your channel ID
 const from = 150; // First post
-const to = 140; // Last post
+const to = 141; // Last post
 
 export default class Portfolio extends Component {
     constructor(props) {
@@ -44,7 +44,7 @@ export default class Portfolio extends Component {
                     <div className="container">
                         <div className="section-title">
                             <h2>Gallery</h2>
-                            <p>My portfolio</p>
+                            <h3>Curated art and my own pics</h3>
                         </div>
                         <div id="portfolio-container" className="row portfolio-container">
                         </div>
