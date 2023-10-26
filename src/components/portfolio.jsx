@@ -22,6 +22,9 @@ export default class Portfolio extends Component {
     populateArt = (prevState) => {
         const { from, imagesToShow, channelId } = prevState;
         const portfolioContainer = document.querySelector('.portfolio-container');
+        if (this.lastItemRef.current) {
+            this.observer.unobserve(this.lastItemRef.current); // Stop observing the last item
+        }
         for (let i = from; i > from - imagesToShow; i--) {
             const script = document.createElement('script');
             script.src = 'https://telegram.org/js/telegram-widget.js?22';
@@ -38,6 +41,10 @@ export default class Portfolio extends Component {
             portfolioContainer.appendChild(itemContainer);
             this.lastItemRef.current = itemContainer;
         }
+        if (this.lastItemRef.current) {
+            this.observer.observe(this.lastItemRef.current); // Start observing the new last item
+        }
+        this.forceUpdate(); 
     };
 
     handleObserver = (entries) => {
@@ -56,7 +63,6 @@ export default class Portfolio extends Component {
     };
 
     componentDidMount() {
-        this.populateArt(this.state);
         this.observer = new IntersectionObserver(this.handleObserver, {
             root: null,
             rootMargin: '0px',
@@ -66,6 +72,7 @@ export default class Portfolio extends Component {
             this.observer.observe(this.lastItemRef.current);
         }
         this.setState({ artloading: false });
+        this.populateArt(this.state);
     }
 
     render() {
