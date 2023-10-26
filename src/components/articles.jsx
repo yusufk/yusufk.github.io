@@ -44,10 +44,8 @@ export default class Articles extends Component {
         const markdownFiles = [];
         try {
             for await (const blobItem of blobItems) {
-                console.log(`Blob: ${blobItem.name}`);
                 if (blobItem.name.endsWith('.md')) {
                     const blobClient = containerClient.getBlobClient(blobItem.name);
-                    console.log(`BlobClient: ${blobClient.url}`);
                     // Get the file from Azure Storage from URL
                     const blobDownloadResponse = await blobClient.download(this.abortController.signal);
                     const blob = await blobDownloadResponse.blobBody;

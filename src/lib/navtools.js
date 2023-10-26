@@ -6,8 +6,8 @@
 */
 import Swiper from 'swiper/bundle';
 import Isotope from 'isotope-layout';
-import GLightbox from 'glightbox';
-import Waypoint from 'waypoints/lib/noframework.waypoints.min.js';
+//import GLightbox from 'glightbox';
+//import Waypoint from 'waypoints/lib/noframework.waypoints.min.js';
 
 export default function Navtools() {
   /**
@@ -82,7 +82,7 @@ export default function Navtools() {
         navbarToggle.classList.toggle('bi-x')
       }
 
-      if (this.hash == '#header') {
+      if (this.hash === '#header') {
         header.classList.remove('header-top')
         sections.forEach((item) => {
           item.classList.remove('section-show')
@@ -124,7 +124,7 @@ export default function Navtools() {
         header.classList.add('header-top')
 
         navlinks.forEach((item) => {
-          if (item.getAttribute('href') == window.location.hash) {
+          if (item.getAttribute('href') === window.location.hash) {
             item.classList.add('active')
           } else {
             item.classList.remove('active')
@@ -216,20 +216,20 @@ export default function Navtools() {
 
   /**
    * Initiate portfolio lightbox 
-   */
+  
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
   });
 
   /**
    * Initiate portfolio details lightbox 
-   */
+  
   const portfolioDetailsLightbox = GLightbox({
     selector: '.portfolio-details-lightbox',
     width: '90%',
     height: '90vh'
   });
-
+ */
   /**
    * Portfolio details slider
    */

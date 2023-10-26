@@ -12,7 +12,7 @@ export default class Repositories extends Component {
     }
 
     componentDidMount() {
-        const token = process.env.REACT_APP_GITHUB_TOKEN;
+        //const token = process.env.REACT_APP_GITHUB_TOKEN;
         const config = {
             //headers: { Authorization: `Bearer ${token}` }
         };

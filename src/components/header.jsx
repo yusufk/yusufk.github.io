@@ -58,6 +58,11 @@ export default class Header extends Component {
                                         Repositories
                                     </a>
                                 </li>
+                                <li>
+                                    <a className="nav-link" href="#portfolio">
+                                        Portfolio
+                                    </a>
+                                </li>
                             </ul>
                             <i className="bi bi-list mobile-nav-toggle" />
                         </nav>
