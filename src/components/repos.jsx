@@ -16,10 +16,13 @@ export default class Repositories extends Component {
         const config = {
             //headers: { Authorization: `Bearer ${token}` }
         };
-
-        fetch('https://api.github.com/users/yusufk/repos', config)
+    
+        fetch('https://api.github.com/users/yusufk/repos?per_page=100', config)
             .then(response => response.json())
             .then(data => {
+                if (Array.isArray(data)) {
+                    data.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+                }
                 this.setState({ repos: data, loading: false });
             })
             .catch(error => {
