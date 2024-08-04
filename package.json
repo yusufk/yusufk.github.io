@@ -4,6 +4,7 @@
   "homepage": "https://yusuf.kaka.co.za",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object":"^7.21.11",
     "@azure/storage-blob": "^12.16.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",

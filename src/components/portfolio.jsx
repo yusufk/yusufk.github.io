@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 const channelId = 'yusufkaka'; // Replace with your channel ID
-const from = 155; // First post
+const from = 166; // First post
 const imagesToShow = 9; // Last post
 
 export default class Portfolio extends Component {
@@ -102,7 +102,7 @@ export default class Portfolio extends Component {
                             <h2>Art</h2>
                             <h3>Curated art and my own pics</h3>
                         </div>
-                        <div id="portfolio-container" className="row portfolio-container">
+                        <div id="portfolio-container" className="row portfolio-container" style={{ minHeight: '500px' }}>
                         </div>
                     </div>
                 </section>
