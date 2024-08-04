@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.7e379c83.css",
-    "main.js": "/static/js/main.a313165b.js",
-    "static/js/787.f1fe27d6.chunk.js": "/static/js/787.f1fe27d6.chunk.js",
+    "main.css": "/static/css/main.8987c0f7.css",
+    "main.js": "/static/js/main.ac6c94c8.js",
+    "static/js/787.29789fa4.chunk.js": "/static/js/787.29789fa4.chunk.js",
     "static/media/Yusuf-Lightbulb.gif": "/static/media/Yusuf-Lightbulb.5c036286796452e82c74.gif",
     "static/media/cappuccino_yusuf.png": "/static/media/cappuccino_yusuf.ea1bd467b9a01a7839b2.png",
     "static/media/remixicon.svg?t=1590207869815": "/static/media/remixicon.9cedd2150922ead84869.svg",
@@ -23,12 +23,12 @@
     "static/media/testimonials-1.jpg": "/static/media/testimonials-1.ee9bf300afd176160f6e.jpg",
     "static/media/testimonials-4.jpg": "/static/media/testimonials-4.cb424233cbb43f6348b6.jpg",
     "index.html": "/index.html",
-    "main.7e379c83.css.map": "/static/css/main.7e379c83.css.map",
-    "main.a313165b.js.map": "/static/js/main.a313165b.js.map",
-    "787.f1fe27d6.chunk.js.map": "/static/js/787.f1fe27d6.chunk.js.map"
+    "main.8987c0f7.css.map": "/static/css/main.8987c0f7.css.map",
+    "main.ac6c94c8.js.map": "/static/js/main.ac6c94c8.js.map",
+    "787.29789fa4.chunk.js.map": "/static/js/787.29789fa4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e379c83.css",
-    "static/js/main.a313165b.js"
+    "static/css/main.8987c0f7.css",
+    "static/js/main.ac6c94c8.js"
   ]
 }
