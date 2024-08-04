@@ -19,7 +19,7 @@ export default class Resume extends Component {
                                     <h4>Yusuf Kaka</h4>
                                     <p>
                                         <em>
-                                            Experienced technologists with 20+ years of experience in telecommunications, mobile app development, innovation management and technology leadership.
+                                            Experienced technologists with 20+ years of experience in telecommunications, software development, innovation management and technology leadership.
                                         </em>
                                     </p>
                                 </div>
