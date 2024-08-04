@@ -25,6 +25,26 @@ export default class Resume extends Component {
                                 </div>
                                 <h3 className="resume-title">Professional Experience</h3>
                                 <div className="resume-item">
+                                    <h4>Product Head: Digital Channels</h4>
+                                    <h5>Capitec · Full-time</h5>
+                                    <h5>Nov 2023 - Current</h5>
+                                    <p>
+                                        <em>City of Johannesburg, Gauteng, South Africa · Hybrid</em>
+                                    </p>
+                                    <p>
+                                    Leading a dynamic team responsible for shaping and enhancing Capitec Business online banking platform and mobile app. Bridging the gap between business strategy and cutting-edge technology to create exceptional digital experiences for Capitec clients.
+                                    </p>
+                                    <p>Key Responsibilities</p>
+                                    <ul>
+                                        <li>Strategic Vision: Drive the strategic vision for Capitec Business digital channels, ensuring alignment with Capitec's overall business objectives. Explore innovative ways to enhance user engagement, streamline processes, and improve customer satisfaction.</li>
+                                        <li>Product Development: Oversee the end-to-end product development lifecycle, from ideation to launch. Collaborating closely with cross-functional teams, defining product roadmaps, prioritize features, and manage delivery timelines.</li>
+                                        <li>User-Centric Design: Champion user-centric design principles, ensuring that Capitecs online banking and app meet the needs of small and large business alike. Focussing on intuitive interfaces, seamless navigation, and personalized experiences.</li>
+                                        <li>Impact on SMEs: By providing efficient tools, easy access to financial services, and tailored solutions, Capitec empowers SMEs to thrive and contribute to the country's economic growth.</li>
+                                    </ul>
+                                    <p>Why it matters</p>
+                                    SMEs are the backbone of South Africa's economy, driving job creation and innovation. Through our digital channels, we enable SMEs to manage their finances, make informed decisions, and accelerate their growth trajectory.
+                                </div>
+                                <div className="resume-item">
                                     <h4>SME and Startups Technology Lead</h4>
                                     <h5>Microsoft · Full-time</h5>
                                     <h5>Jul 2022 - 2023 · 1 yr 4 mos</h5>

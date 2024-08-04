@@ -799,8 +799,8 @@ section .container {
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio-container {
-  position: relative;
-  min-height: 500px; /* Ensure the container has a minimum height */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .portfolio .portfolio-item {

@@ -54,6 +54,8 @@ export default class Portfolio extends Component {
             portfolioContainer.appendChild(itemContainer);
             this.lastItemRef.current = itemContainer;
         }
+        // Set the container's height
+        portfolioContainer.style.height = `100%`; 
         if (this.lastItemRef.current) {
             this.observer.observe(this.lastItemRef.current); // Start observing the new last item
         }
@@ -65,7 +67,7 @@ export default class Portfolio extends Component {
         if (lastEntry.isIntersecting) {
             this.setState(
                 (prevState) => ({
-                    from: prevState.from - 9,
+                    from: prevState.from - imagesToShow,
                 }),
                 () => {
                     this.populateArt(this.state);
@@ -88,6 +90,18 @@ export default class Portfolio extends Component {
         setTimeout(() => { // Use setTimeout to delay the populateArt function call
             this.populateArt(this.state);
         }, 1000); // Delay the function call by 1 second (adjust as needed)
+
+        // Suppress ResizeObserver error
+        const resizeObserverErrDiv = document.createElement('div');
+        resizeObserverErrDiv.id = 'resize-observer-error';
+        document.body.appendChild(resizeObserverErrDiv);
+        const resizeObserverErrStyle = document.createElement('style');
+        resizeObserverErrStyle.innerHTML = `
+        #resize-observer-error {
+            display: none;
+        }
+    `;
+        document.head.appendChild(resizeObserverErrStyle);
     }
 
     render() {
@@ -100,9 +114,9 @@ export default class Portfolio extends Component {
                     <div className="container">
                         <div className="section-title">
                             <h2>Art</h2>
-                            <h3>Curated art and my own pics</h3>
+                            <h3>Curated art and photos</h3>
                         </div>
-                        <div id="portfolio-container" className="row portfolio-container" style={{ minHeight: '500px' }}>
+                        <div id="portfolio-container" className="row portfolio-container">
                         </div>
                     </div>
                 </section>
