@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LazyLoad from 'react-lazyload';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 
 function parseMetadata(text) {
     const metadata = {};
@@ -92,7 +93,7 @@ export default class Articles extends Component {
                                                         <h1> {article.metadata.title}</h1>
                                                     </div>
                                                     <div className='article-body'>
-                                                        <ReactMarkdown children={article.text} skipHtml={true} />
+                                                        <ReactMarkdown children={article.text} skipHtml={false} rehypePlugins={[rehypeRaw]} />
                                                         <p>Published: {article.metadata.date}</p>
                                                     </div>
                                                 </div>
