@@ -560,6 +560,21 @@ section .container {
   color: #1888d2;
 }
 
+/* Mobile layout */
+@media (max-width: 768px) {
+  .articles .container {
+      flex-direction: column;
+  }
+
+  .articles .container .col-md-8 {
+      order: 2;
+  }
+
+  .articles .container .col-md-4 {
+      order: 1;
+  }
+}
+
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
