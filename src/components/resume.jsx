@@ -25,9 +25,26 @@ export default class Resume extends Component {
                                 </div>
                                 <h3 className="resume-title">Professional Experience</h3>
                                 <div className="resume-item">
+                                    <h4>Product Head: GenAI</h4>
+                                    <h5>Capitec · Full-time</h5>
+                                    <h5>Dec 2024 - Current</h5>
+                                    <p>
+                                        <em>City of Johannesburg, Gauteng, South Africa · Hybrid</em>
+                                    </p>
+                                    <p>
+                                        <ul>
+                                            <li>Leading the development and execution of Capitec's Gen AI products, integrating AI to enhance client and consultant interactions with minimal human intervention. </li>
+                                            <li>Responsible for driving innovation, developing product strategy, and ensuring seamless delivery across Retail, Insurance, and Business Banking channels. </li>
+                                            <li>Collaborating with cross-functional teams to align AI-driven solutions with business objectives and improve overall customer experience.Leading the development and execution of Capitec's Gen AI products, integrating AI to enhance client and consultant interactions with minimal human intervention. </li>
+                                            <li>Responsible for driving innovation, developing product strategy, and ensuring seamless delivery across Retail, Insurance, and Business Banking channels. </li>
+                                            <li>Collaborating with cross-functional teams to align AI-driven solutions with business objectives and improve overall customer experience.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                                <div className="resume-item">
                                     <h4>Product Head: Digital Channels</h4>
                                     <h5>Capitec · Full-time</h5>
-                                    <h5>Nov 2023 - Current</h5>
+                                    <h5>Nov 2023 - Dec 2024</h5>
                                     <p>
                                         <em>City of Johannesburg, Gauteng, South Africa · Hybrid</em>
                                     </p>
