@@ -3,7 +3,7 @@ title: Experimenting with NFT's
 date: 2022-04-21
 --->
 
-NFT's sparked excitement around a new way to monetise digital assets. I've been following the space for a while and decided to experiment with creating my own NFT's. Here's a few of my experiments:
+NFT's sparked excitement around a new way to monetise digital assets. I've been following the space for a while and decided to experiment with creating my own NFT's. Here's an experiment built using Blender:
 
 
 <video width="320" height="240" controls>
