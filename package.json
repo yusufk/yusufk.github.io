@@ -4,8 +4,8 @@
   "homepage": "https://yusuf.kaka.co.za",
   "private": true,
   "dependencies": {
-    "@babel/plugin-proposal-private-property-in-object":"^7.21.11",
     "@azure/storage-blob": "^12.16.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -21,6 +21,7 @@
     "react-github-calendar": "^3.2.2",
     "react-lazyload": "^3.2.0",
     "react-markdown": "^8.0.2",
+    "react-notion": "^0.10.0",
     "react-scripts": "^5.0.0",
     "react-waypoint": "^10.1.0",
     "remixicon": "^2.5.0",

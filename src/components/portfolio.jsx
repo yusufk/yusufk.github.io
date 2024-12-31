@@ -20,15 +20,21 @@ export default class Portfolio extends Component {
     }
 
     getSettings = () => {
-        // Get the ID of the last message in your channel from the JSON settings file on Azure Blob Storage
-        fetch('https://yusufkakacozastorageacc.blob.core.windows.net/yusufkakacoza/settings.json')
-            .then(response => response.json())
+        // Get the ID of the last message in your channel from the JSON settings file in the local data directory
+        fetch('/data/settings.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 const lastMessageId = data.lastMessageId;
                 this.setState({ from: lastMessageId }); // Set the from state to the ID of the last message
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
+                this.setState({ error });
             });
     };
 

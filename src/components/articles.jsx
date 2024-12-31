@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import LazyLoad from 'react-lazyload';
 import ReactMarkdown from 'react-markdown';
-import { BlobServiceClient } from '@azure/storage-blob';
 
 function parseMetadata(text) {
     const metadata = {};
@@ -36,39 +35,35 @@ export default class Articles extends Component {
     }
 
     componentDidMount = async () => {
-        const containerUrl = 'https://yusufkakacozastorageacc.blob.core.windows.net/';
-        const blobServiceClient = new BlobServiceClient(containerUrl);
-        const containerClient = blobServiceClient.getContainerClient("yusufkakacoza");
-        const blobItems = containerClient.listBlobsFlat();
-
         const markdownFiles = [];
+        const dataDir = '/data/articles';
+
         try {
-            for await (const blobItem of blobItems) {
-                if (blobItem.name.endsWith('.md')) {
-                    const blobClient = containerClient.getBlobClient(blobItem.name);
-                    // Get the file from Azure Storage from URL
-                    const blobDownloadResponse = await blobClient.download(this.abortController.signal);
-                    const blob = await blobDownloadResponse.blobBody;
-                    const markdownText = await blob.text();
-                    const metadata = parseMetadata(markdownText.toString('utf8'));
-                    markdownFiles.push({
-                        text: markdownText,
-                        metadata: metadata,
-                    });
-                }
+            // Fetch the index.json file
+            const response = await fetch(`${dataDir}/index.json`);
+            const files = await response.json();
+
+            console.log('Files:', files); // Debug: Log the list of files
+
+            for (const file of files) {
+                const fileResponse = await fetch(`${dataDir}/${file}`);
+                const markdownText = await fileResponse.text();
+                const metadata = parseMetadata(markdownText);
+                markdownFiles.push({
+                    text: markdownText,
+                    metadata: metadata,
+                });
             }
+
             // Sort the markdownFiles array by date in descending order
             markdownFiles.sort((a, b) => new Date(b.metadata.date) - new Date(a.metadata.date));
+            console.log('Markdown Files:', markdownFiles); // Debug: Log the markdown files
+
+            this.setState({ articles: markdownFiles, loading: false });
         } catch (error) {
-            markdownFiles.push({
-                text: "Error loading articles...",
-                metadata: {
-                    title: "Error loading articles...",
-                    date: new Date().toISOString().slice(0, 10),
-                },
-            });
+            console.error('Error fetching markdown files:', error); // Debug: Log any errors
+            this.setState({ error, loading: false });
         }
-        this.setState({ articles: markdownFiles, loading: false });
     };
 
     componentWillUnmount() {
