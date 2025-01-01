@@ -8,7 +8,9 @@ This latest iteration was inspired by a need to get familiar with Node.js and ne
 - [My Learning Ground and Source Code for https://yusuf.kaka.co.za](#my-learning-ground-and-source-code-for-httpsyusufkakacoza)
   - [Table of Contents](#table-of-contents)
   - [Stack](#stack)
+  - [Development Requirements](#development-requirements)
   - [Installation](#installation)
+  - [Development Commands](#development-commands)
   - [Usage](#usage)
   - [Features](#features)
   - [Changes](#changes)
@@ -17,30 +19,68 @@ This latest iteration was inspired by a need to get familiar with Node.js and ne
   - [Contact](#contact)
 
 ## Stack
-- React
-- Node.js
-- GitHub Pages
-- Cloudflare
+- **Frontend Framework**
+  - React 17
+  - Bootstrap 5
+  - Bootstrap Icons
+  - Boxicons
+  - Remixicon
+  - GLightbox
+
+- **Performance & Loading**
+  - React Lazyload
+  - React Waypoint
+  - Isotope Layout
+  - Swiper
+
+- **Content & Data**
+  - React Markdown
+  - Rehype Raw (HTML in markdown)
+  - Axios (HTTP client)
+
+- **Analytics & Tracking**
+  - React GA (Google Analytics)
+
+- **Development & Build**
+  - React Scripts (Create React App)
+  - Webpack
+  - Babel
+  - Jest (Testing)
+
+- **Infrastructure**
+  - GitHub Pages (Hosting)
+  - Cloudflare (DNS & CDN)
+
+## Development Requirements
+- Node.js v14 or higher
+- npm v6 or higher
+- Git
 
 ## Installation
-To set up the project locally, follow these steps:
-
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/your-repo.git
+    git clone https://github.com/yusufk/yusufk.github.io.git
     ```
 2. Navigate to the project directory:
     ```sh
-    cd your-repo
+    cd yusufk.github.io
     ```
 3. Install the dependencies:
     ```sh
     npm install
     ```
-4. Start the development server:
-    ```sh
-    npm start
-    ```
+
+## Development Commands
+```sh
+# Start development server
+npm start
+
+# Build for production
+npm run build
+
+# Run tests
+npm test
+```
 
 ## Usage
 To use the project, follow these steps:
@@ -56,6 +96,13 @@ To use the project, follow these steps:
 
 ## Changes
 - 2024-12-31: Removed all dependency on Azure, moving markdown files for articles to GitHub Pages as well
+- 2023-10-26: Load portfolio items from Telegram channel
+- 2023-10-23: Moved articles to Azure blob
+- 2023-10-18: Dynamically fetch github repos
+- 2023-10-16: Added an Article list
+- 2022-01-31: Added resume, repos and gallery
+- 2022-01-28: Deployed to github pages
+- 2022-01-27: Initialize project using Create React App
 
 ## Contributing
 Contributions are welcome! Please follow these steps to contribute:
