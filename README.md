@@ -1,47 +1,82 @@
-# My attempt to get started with Create React App
+# My Learning Ground and Source Code for [https://yusuf.kaka.co.za](https://yusuf.kaka.co.za)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
-and is based on this [tutorial](https://www.linkedin.com/pulse/how-make-deploy-your-own-online-resume-using-reactjs-simon-defrenet/), 
-uses this [tool](https://transform.tools/html-to-jsx) 
-and this [theme](https://transform.tools/html-to-jsx).
+Personal websites have always been a good opportunity for me to learn new technologies and frameworks. My first encounter with HTML was in the late 90's with my site on Angelfire.com, which was then replaced by a blog on Blogger.com. I then moved to WordPress for a while, and at some point experimented with a slew of different frameworks.
 
-## Available Scripts
+This latest iteration was inspired by a need to get familiar with Node.js and newer JavaScript frameworks like React and Next.js. I also wanted to test the limits of static sites while experimenting with hosting options on Heroku, Digital Ocean, Azure, and AWS. In the end, I found it perfectly acceptable to host my site on GitHub Pages, with the source code on GitHub and the DNS managed by Cloudflare.
 
-In the project directory, you can run:
+## Table of Contents
+- [My Learning Ground and Source Code for https://yusuf.kaka.co.za](#my-learning-ground-and-source-code-for-httpsyusufkakacoza)
+  - [Table of Contents](#table-of-contents)
+  - [Stack](#stack)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Features](#features)
+  - [Changes](#changes)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
 
-### `npm start`
+## Stack
+- React
+- Node.js
+- GitHub Pages
+- Cloudflare
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
+To set up the project locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/your-repo.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd your-repo
+    ```
+3. Install the dependencies:
+    ```sh
+    npm install
+    ```
+4. Start the development server:
+    ```sh
+    npm start
+    ```
 
-### `npm test`
+## Usage
+To use the project, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Open your browser and navigate to `http://localhost:3000`.
+2. Explore the website and its features.
 
-### `npm run build`
+## Features
+- Responsive design
+- Markdown-based articles
+- Lazy loading of images and content
+- Deployment via GitHub Actions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Changes
+- 2024-12-31: Removed all dependency on Azure, moving markdown files for articles to GitHub Pages as well
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributing
+Contributions are welcome! Please follow these steps to contribute:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Fork the repository.
+2. Create a new branch:
+    ```sh
+    git checkout -b feature/your-feature-name
+    ```
+3. Make your changes and commit them:
+    ```sh
+    git commit -m "Add some feature"
+    ```
+4. Push to the branch:
+    ```sh
+    git push origin feature/your-feature-name
+    ```
+5. Open a pull request.
 
-### `npm run eject`
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-### `npm run deploy`
-
-Deploys this static site to Github pages using gh-pages.
+## Contact
+For any inquiries, please contact me at [yusufk@gmail.com](mailto:yusufk@gmail.com).

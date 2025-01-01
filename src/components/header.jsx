@@ -68,7 +68,7 @@ export default class Header extends Component {
                         </nav>
                         {/* .navbar */}
                         <div className="social-links">
-                            <a href="https://twitter.com/yusufkza" className="twitter">
+                            <a href="https://bsky.app/profile/yusufk.co.za" className="bluesky">
                                 <i className="bi bi-twitter" />
                             </a>
                             <a href="https://github.com/yusufk" className="github">
