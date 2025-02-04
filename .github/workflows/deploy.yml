@@ -20,6 +20,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Generate index files
+        run: |
+          cd public/data
+          for dir in */; do
+            if [ -d "$dir" ]; then
+              cd "$dir"
+              find . -maxdepth 1 -name "*.md" -exec basename {} \; | \
+              jq -R -s -c 'split("\n")[:-1]' > index.json
+              cd ..
+            fi
+          done
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
