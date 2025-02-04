@@ -1,7 +1,9 @@
 name: Update Content
 
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     paths:
       - 'public/data/**'
     branches:
@@ -9,6 +11,7 @@ on:
 
 jobs:
   update-content:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout content branch
@@ -22,9 +25,7 @@ jobs:
           for dir in */; do
             if [ -d "$dir" ]; then
               cd "$dir"
-              # Remove old index
               rm -f index.json
-              # Create new index only if markdown files exist
               if find . -maxdepth 1 -name "*.md" | grep -q .; then
                 find . -maxdepth 1 -name "*.md" -exec basename {} \; | \
                 jq -R -s -c 'split("\n")[:-1]' > index.json
@@ -33,19 +34,28 @@ jobs:
             fi
           done
 
-      - name: Checkout gh-pages
+      - name: Checkout gh-pages branch
         uses: actions/checkout@v2
         with:
           ref: gh-pages
           path: gh-pages
 
-      - name: Copy updated files
+      - name: Update gh-pages
         run: |
-          mkdir -p gh-pages/data
           cp -r public/data/* gh-pages/data/
           cd gh-pages
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add data/
-          git commit -m "Update content from content branch" || echo "No changes to commit"
+          git commit -m "Update content from content branch" || echo "No changes"
           git push origin gh-pages
+
+      - name: Create PR to development
+        uses: peter-evans/create-pull-request@v5
+        with:
+          branch: content-sync
+          base: development
+          title: 'Sync content updates to development'
+          body: 'Automated PR to sync content updates from content branch'
+          commit-message: 'Sync content updates'
+          delete-branch: true
