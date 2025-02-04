@@ -22,7 +22,13 @@ jobs:
           for dir in */; do
             if [ -d "$dir" ]; then
               cd "$dir"
-              ls *.md 2>/dev/null | jq -R -s -c 'split("\n")[:-1]' > index.json
+              # Remove old index
+              rm -f index.json
+              # Create new index only if markdown files exist
+              if find . -maxdepth 1 -name "*.md" | grep -q .; then
+                find . -maxdepth 1 -name "*.md" -exec basename {} \; | \
+                jq -R -s -c 'split("\n")[:-1]' > index.json
+              fi
               cd ..
             fi
           done
