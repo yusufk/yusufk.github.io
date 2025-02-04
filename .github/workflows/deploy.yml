@@ -4,9 +4,16 @@ on:
   push:
     branches:
       - master  # or the branch you want to deploy from
+  pull_request:
+    types:
+      - closed
+    branches:
+      - master
 
 jobs:
   build:
+    # Only run if PR was merged
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +23,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
