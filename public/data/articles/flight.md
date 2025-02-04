@@ -8,9 +8,9 @@ categories: AI, Travel
 # I'm on a flight, keep me entertained...
 
 ## Introduction
-I'm not a talkative person, and I am particularly reserved whilst travelling on flights, and in fact look forward to the opportunity to just zone out, self-reflect, or get immersed in an audio book or podcast, within the dulled humming of noise-cancelled jet engines. On a recent 2-hour flight, I had a very different experience though.
+I'm not a talkative person, particularly when it comes to strangers on flights. In fact, I look forward to the me-time at the airport and plane to just chill, self-reflect, or get immersed in an audio book. There's something relaxing about the dulled humming of noise-cancelled jet engines. 
 
-After many frustrating failed attempts to squeeze enough resources out of my poor "manager spec" MacBook Air, I had just managed to get llama3.2:1B downloaded using free Airport Wi-Fi ahead of the flight.
+On a recent 2-hour flight though, I had a very different experience. After many frustrating failed attempts to squeeze enough resources out of my poor "manager spec" MacBook Air, I had just managed to get llama3.2:1B downloaded using free Airport Wi-Fi ahead of the flight.
 
 Instead of the Kindle, I opted to continue with the MacBook to check if the model was running as I settled in. What follows is the conversation with that basic setup that somehow kept me engaged for the remainder of that flight.
 
