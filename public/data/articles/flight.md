@@ -5,9 +5,6 @@ description: An unexpected conversation with an LLM on a flight
 categories: AI, Travel
 -->
 
-# I'm on a flight, keep me entertained...
-
-## Introduction
 I'm not a talkative person, particularly when it involves strangers on flights. In fact, I look forward to the me-time at the airport and plane to just chill, self-reflect, or get immersed in an audio book. There's something relaxing about the dulled humming of noise-cancelled jet engines. 
 
 On a recent 2-hour flight though, I had a very different experience. After many frustrating failed attempts to squeeze enough resources out of my poor "manager spec" MacBook Air, I had just managed to get llama3.2:1B downloaded using free Airport Wi-Fi ahead of the flight.
