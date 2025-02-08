@@ -13,7 +13,18 @@ export default class Header extends Component {
                         <h2>
                             I'm a passionate&nbsp;
                             <div className="ms-slider">
-                                {/* slider content */}
+                                <ul className="ms-slider__words">
+                                        <li className="ms-slider__word">Engineer</li>
+                                        <li className="ms-slider__word">Husband</li>
+                                        <li className="ms-slider__word">Product Manager</li>
+                                        <li className="ms-slider__word">Wanderer</li>
+                                        <li className="ms-slider__word">Father</li>
+                                        <li className="ms-slider__word">Mountain Biker</li>
+                                        <li className="ms-slider__word">Tinkerer</li>
+                                        <li className="ms-slider__word">Muslim</li>
+                                        <li className="ms-slider__word">Technologist</li>
+                                        <li className="ms-slider__word">Engineer</li>
+                                </ul>
                             </div>
                         </h2>
                         <nav id="navbar" className="navbar">
