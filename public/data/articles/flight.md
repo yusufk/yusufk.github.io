@@ -5,7 +5,7 @@ description: An unexpected conversation with an LLM on a flight
 categories: AI, Travel
 -->
 
-I'm generally a quiet person, but I'm particularly reserved when it comes to chattingg to strangers at the airport or on flights. Noise-cancelling headphones on-ear, I look forward to the me-time, chilling, reflecting, immersing myself in an audio book or a series.
+I'm generally a quiet person, but I'm particularly reserved when it comes to chatting to strangers at the airport or on flights. Noise-cancelling headphones on-ear, I look forward to the me-time, chilling, reflecting, immersing myself in an audio book or a series.
 
 On a recent 2-hour flight however, I had a very different experience. After many frustrating failed attempts to squeeze enough resources out of my poor "manager spec" MacBook Air, I had just managed to get llama3.2:1B downloaded using free Airport Wi-Fi ahead of the flight.
 
