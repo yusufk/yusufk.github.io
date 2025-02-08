@@ -10,7 +10,7 @@ export default class Header extends Component {
                 <header id="header">
                     <div className="container">
                         <h1>
-                            <a href="index.html">Yusuf Kaka</a>
+                            <a href="/">Yusuf Kaka</a>
                         </h1>
                         {/* Uncomment below if you prefer to use an image logo */}
                         {/* <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> */}
