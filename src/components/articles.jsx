@@ -142,7 +142,7 @@ class Articles extends Component {
                 <section id="articles" className="articles section-show">
                     <div className="container">
                         <div className="row">
-                            <div className="col-12">
+                            <div className="col-md-8">
                                 <div className="article">
                                     <div className="article-header">
                                         <h1>{article.metadata.title}</h1>
@@ -156,6 +156,22 @@ class Articles extends Component {
                                     </Link>
                                 </div>
                             </div>
+                            <div className="col-md-4">
+                            <div className="section-title">
+                                <h2>Article List</h2>
+                            </div>
+                            <div className="article-list">
+                                <ul>
+                                    {articles.map((article) => (
+                                        <li key={article.metadata.slug}>
+                                            <Link to={`/articles/${article.metadata.slug}`}>
+                                                {article.metadata.title}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </section>
