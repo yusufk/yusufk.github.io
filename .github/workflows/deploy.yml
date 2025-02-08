@@ -6,6 +6,7 @@ on:
       - closed
     branches:
       - master
+      - development
 
 concurrency:
   group: "pages"
