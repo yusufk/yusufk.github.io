@@ -3,7 +3,7 @@ title: Experimenting with NFT's
 date: 2022-04-21
 --->
 
-NFT's sparked excitement around a new way to monetise digital assets. I've been following the space for a while and decided to experiment with creating my own NFT's. Here's an experiment built using Blender:
+An experimental 3D model build using Blender, availabe on [[OpenSea|https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/96575051771539935017186713945733009438682784717990966492482054642339242049537/]]:
 
 
 <video width="320" height="240" controls>
