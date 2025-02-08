@@ -1,19 +1,7 @@
-/**
-* Template Name: Personal - v4.7.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 import Swiper from 'swiper/bundle';
 import Isotope from 'isotope-layout';
 
 export default function Navtools() {
-  /**
-   * Selects DOM elements with error handling
-   * @param {string} el - CSS selector string
-   * @param {boolean} all - If true, returns all matching elements; if false, returns first match
-   * @returns {Element|Element[]|null} Single element or array of elements matching the selector
-   */
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -22,136 +10,101 @@ export default function Navtools() {
       return document.querySelector(el)
     }
   }
-
-  /**
-   * Attaches event listeners to DOM elements with support for multiple elements
-   * @param {string} type - Event type (e.g., 'click', 'submit')
-   * @param {string} el - CSS selector for target element(s)
-   * @param {Function} listener - Event handler function
-   * @param {boolean} all - If true, attaches to all matching elements
-   */
   const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
+    // Add debug log
+    console.log('Setting up listener for:', el);
 
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
+    document.addEventListener(type, (e) => {
+      // Add debug log
+      console.log('Event triggered:', e.target);
+      const target = e.target.closest(el);
+      // Add debug log
+      console.log('Closest match:', target);
+
+      if (target) {
+        listener.call(target, e);
       }
-    }
+    });
   }
 
-  /**
-   * Smoothly scrolls to the top of the page
-   * @param {string} el - Target element ID (currently unused in implementation)
-   */
-  const scrollto = (el) => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  // Add mobile nav toggle handler
+  on('click', 'i.mobile-nav-toggle', function(e) {
+    console.log('Mobile toggle clicked');
+    let navbar = select('nav');
+    navbar.classList.toggle('navbar-mobile');
+    this.classList.toggle('bi-list');
+    this.classList.toggle('bi-x');
+  });
+
+  // Modified navigation link handler
+  on('click', 'a.nav-link', function(e) {
+    console.log("Clicky");
+    e.preventDefault();
+    const targetPath = this.getAttribute('href');
+    console.log('Target path:', targetPath);
+    
+    let navbar = select('nav');
+    let header = select('header');
+    let sections = select('section', true);
+    let navlinks = select('.nav-link', true);
+  
+    // Update active states
+    navlinks.forEach((item) => {
+      item.classList.remove('active')
     })
-  }
-
-  /**
-   * Handles mobile navigation menu toggle
-   * Toggles mobile navigation visibility and switches between hamburger/close icons
-   */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
+    this.classList.add('active')
+  
+    // Handle mobile menu
+    if (navbar.classList.contains('navbar-mobile')) {
+      navbar.classList.remove('navbar-mobile')
+      let navbarToggle = select('.mobile-nav-toggle')
+      navbarToggle.classList.toggle('bi-list')
+      navbarToggle.classList.toggle('bi-x')
+    }
+  
+    // Handle header and sections
+    if (targetPath === '/') {
+      header.classList.remove('header-top')
+      sections.forEach((item) => {
+        item.classList.remove('section-show')
+      })
+    } else {
+      header.classList.add('header-top')
+      
+      // Always use setTimeout for consistency
+      setTimeout(() => {
+        sections.forEach((item) => {
+          item.classList.remove('section-show')
+        })
+        const sectionId = targetPath.replace('/', '');
+        const targetSection = select(`section#${sectionId}`);
+        console.log('Looking for section with ID:', sectionId);
+        console.log('Found section:', targetSection);
+        if (targetSection) {
+          targetSection.classList.add('section-show');
+        }
+      }, 350);
+    }
   })
+  
 
-  /**
-   * Manages navigation link clicks and section visibility
-   * - Updates active navigation state
-   * - Handles mobile menu state
-   * - Controls section visibility animations
-   * - Manages header styling
-   */
-  on('click', '#navbar .nav-link', function(e) {
-    let section = select(this.hash)
-    if (section) {
-      e.preventDefault()
 
-      let navbar = select('#navbar')
-      let header = select('#header')
-      let sections = select('section', true)
-      let navlinks = select('#navbar .nav-link', true)
+  // Modified initial load handler
+  window.addEventListener('load', () => {
+    const currentPath = window.location.pathname;
+    if (currentPath !== '/') {
+      let header = select('header')
+      let navlinks = select('nav-link', true)
+
+      header.classList.add('header-top')
 
       navlinks.forEach((item) => {
-        item.classList.remove('active')
+        if (item.getAttribute('href') === currentPath) {
+          item.classList.add('active')
+        } else {
+          item.classList.remove('active')
+        }
       })
-
-      this.classList.add('active')
-
-      if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
-
-      if (this.hash === '#header') {
-        header.classList.remove('header-top')
-        sections.forEach((item) => {
-          item.classList.remove('section-show')
-        })
-        return;
-      }
-
-      if (!header.classList.contains('header-top')) {
-        header.classList.add('header-top')
-        setTimeout(function() {
-          sections.forEach((item) => {
-            item.classList.remove('section-show')
-          })
-          section.classList.add('section-show')
-
-        }, 350);
-      } else {
-        sections.forEach((item) => {
-          item.classList.remove('section-show')
-        })
-        section.classList.add('section-show')
-      }
-
-      scrollto(this.hash)
-    }
-  }, true)
-
-  /**
-   * Initializes page state based on URL hash
-   * - Sets active navigation item
-   * - Shows correct section
-   * - Adjusts header styling
-   * - Performs smooth scroll to target section
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      let initial_nav = select(window.location.hash)
-
-      if (initial_nav) {
-        let header = select('#header')
-        let navlinks = select('#navbar .nav-link', true)
-
-        header.classList.add('header-top')
-
-        navlinks.forEach((item) => {
-          if (item.getAttribute('href') === window.location.hash) {
-            item.classList.add('active')
-          } else {
-            item.classList.remove('active')
-          }
-        })
-
-        setTimeout(function() {
-          initial_nav.classList.add('section-show')
-        }, 350);
-
-        scrollto(window.location.hash)
-      }
     }
   });
 
@@ -202,9 +155,9 @@ export default function Navtools() {
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');

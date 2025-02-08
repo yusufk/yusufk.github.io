@@ -1,90 +1,73 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Header extends Component {
-
     render() {
         return (
             <div>
-                {/* ======= Header ======= */}
                 <header id="header">
                     <div className="container">
                         <h1>
-                            <a href="/">Yusuf Kaka</a>
+                            <Link to="/">Yusuf Kaka</Link>
                         </h1>
-                        {/* Uncomment below if you prefer to use an image logo */}
-                        {/* <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> */}
                         <h2>
                             I'm a passionate&nbsp;
                             <div className="ms-slider">
-                                <ul className="ms-slider__words">
-                                        <li className="ms-slider__word">Engineer</li>
-                                        <li className="ms-slider__word">Husband</li>
-                                        <li className="ms-slider__word">Developer</li>
-                                        <li className="ms-slider__word">Wanderer</li>
-                                        <li className="ms-slider__word">Father</li>
-                                        <li className="ms-slider__word">Mountain biker</li>
-                                        <li className="ms-slider__word">Tinkerer</li>
-                                        <li className="ms-slider__word">Muslim</li>
-                                        <li className="ms-slider__word">Technologist</li>
-                                        <li className="ms-slider__word">Engineer</li>
-                                </ul>
+                                {/* slider content */}
                             </div>
                         </h2>
                         <nav id="navbar" className="navbar">
                             <ul>
                                 <li>
-                                    <a className="nav-link active" href="#header">
+                                    <Link to="/" className="nav-link active">
                                         Home
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="nav-link" href="#about">
+                                    <Link to="/about" className="nav-link">
                                         About
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="nav-link" href="#resume">
+                                    <Link to="/resume" className="nav-link">
                                         Resume
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="nav-link" href="#articles">
+                                    <Link to="/articles" className="nav-link">
                                         Articles
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="nav-link" href="#repos">
+                                    <Link to="/repos" className="nav-link">
                                         Repositories
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="nav-link" href="#portfolio">
+                                    <Link to="/portfolio" className="nav-link">
                                         Digital Art
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                             <i className="bi bi-list mobile-nav-toggle" />
                         </nav>
-                        {/* .navbar */}
                         <div className="social-links">
-                            <a href="https://bsky.app/profile/yusufk.co.za" className="bluesky">
+                            <a href="https://bsky.app/profile/yusufk.co.za" className="bluesky" target="_blank" rel="noopener noreferrer">
                                 <i className="bi bi-twitter" />
                             </a>
-                            <a href="https://github.com/yusufk" className="github">
+                            <a href="https://github.com/yusufk" className="github" target="_blank" rel="noopener noreferrer">
                                 <i className="bi bi-github" />
                             </a>
-                            <a href="https://t.me/yusufkaka" className="telegram">
+                            <a href="https://t.me/yusufkaka" className="telegram" target="_blank" rel="noopener noreferrer">
                                 <i className="bi bi-telegram" />
                             </a>
-                            <a href="https://www.linkedin.com/in/yusufkaka/" className="linkedin">
+                            <a href="https://www.linkedin.com/in/yusufkaka/" className="linkedin" target="_blank" rel="noopener noreferrer">
                                 <i className="bi bi-linkedin" />
                             </a>
                         </div>
                     </div>
                 </header>
-                {/* End Header */}
             </div>
-        )
+        );
     }
 }
