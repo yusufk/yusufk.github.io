@@ -1,18 +1,7 @@
-/**
-* Template Name: Personal - v4.7.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 import Swiper from 'swiper/bundle';
 import Isotope from 'isotope-layout';
-//import GLightbox from 'glightbox';
-//import Waypoint from 'waypoints/lib/noframework.waypoints.min.js';
 
 export default function Navtools() {
-  /**
-   * Easy selector helper function
-   */
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -21,144 +10,109 @@ export default function Navtools() {
       return document.querySelector(el)
     }
   }
-
-  /**
-   * Easy event listener function
-   */
   const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
+    // Add debug log
+    console.log('Setting up listener for:', el);
 
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
+    document.addEventListener(type, (e) => {
+      // Add debug log
+      console.log('Event triggered:', e.target);
+      const target = e.target.closest(el);
+      // Add debug log
+      console.log('Closest match:', target);
+
+      if (target) {
+        listener.call(target, e);
       }
-    }
+    });
   }
 
-  /**
-   * Scrolls to an element with header offset
-   */
-  const scrollto = (el) => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  // Add mobile nav toggle handler
+  on('click', 'i.mobile-nav-toggle', function(e) {
+    console.log('Mobile toggle clicked');
+    let navbar = select('nav');
+    navbar.classList.toggle('navbar-mobile');
+    this.classList.toggle('bi-list');
+    this.classList.toggle('bi-x');
+  });
+
+  // Modified navigation link handler
+  on('click', 'a.nav-link', function(e) {
+    console.log("Clicky");
+    e.preventDefault();
+    const targetPath = this.getAttribute('href');
+    console.log('Target path:', targetPath);
+    
+    let navbar = select('nav');
+    let header = select('header');
+    let sections = select('section', true);
+    let navlinks = select('.nav-link', true);
+  
+    // Update active states
+    navlinks.forEach((item) => {
+      item.classList.remove('active')
     })
-  }
-
-  /**
-   * Mobile nav toggle
-   */
-  on('click', '.mobile-nav-toggle', function (e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
+    this.classList.add('active')
+  
+    // Handle mobile menu
+    if (navbar.classList.contains('navbar-mobile')) {
+      navbar.classList.remove('navbar-mobile')
+      let navbarToggle = select('.mobile-nav-toggle')
+      navbarToggle.classList.toggle('bi-list')
+      navbarToggle.classList.toggle('bi-x')
+    }
+  
+    // Handle header and sections
+    if (targetPath === '/') {
+      header.classList.remove('header-top')
+      sections.forEach((item) => {
+        item.classList.remove('section-show')
+      })
+    } else {
+      header.classList.add('header-top')
+      
+      // Always use setTimeout for consistency
+      setTimeout(() => {
+        sections.forEach((item) => {
+          item.classList.remove('section-show')
+        })
+        const sectionId = targetPath.replace('/', '');
+        const targetSection = select(`section#${sectionId}`);
+        console.log('Looking for section with ID:', sectionId);
+        console.log('Found section:', targetSection);
+        if (targetSection) {
+          targetSection.classList.add('section-show');
+        }
+      }, 350);
+    }
   })
+  
 
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
-  on('click', '#navbar .nav-link', function (e) {
-    let section = select(this.hash)
-    if (section) {
-      e.preventDefault()
 
-      let navbar = select('#navbar')
-      let header = select('#header')
-      let sections = select('section', true)
-      let navlinks = select('#navbar .nav-link', true)
+  // Modified initial load handler
+  window.addEventListener('load', () => {
+    const currentPath = window.location.pathname;
+    if (currentPath !== '/') {
+      let header = select('header')
+      let navlinks = select('nav-link', true)
+
+      header.classList.add('header-top')
 
       navlinks.forEach((item) => {
-        item.classList.remove('active')
+        if (item.getAttribute('href') === currentPath) {
+          item.classList.add('active')
+        } else {
+          item.classList.remove('active')
+        }
       })
-
-      this.classList.add('active')
-
-      if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
-
-      if (this.hash === '#header') {
-        header.classList.remove('header-top')
-        sections.forEach((item) => {
-          item.classList.remove('section-show')
-        })
-        return;
-      }
-
-      if (!header.classList.contains('header-top')) {
-        header.classList.add('header-top')
-        setTimeout(function () {
-          sections.forEach((item) => {
-            item.classList.remove('section-show')
-          })
-          section.classList.add('section-show')
-
-        }, 350);
-      } else {
-        sections.forEach((item) => {
-          item.classList.remove('section-show')
-        })
-        section.classList.add('section-show')
-      }
-
-      scrollto(this.hash)
-    }
-  }, true)
-
-  /**
-   * Activate/show sections on load with hash links
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      let initial_nav = select(window.location.hash)
-
-      if (initial_nav) {
-        let header = select('#header')
-        let navlinks = select('#navbar .nav-link', true)
-
-        header.classList.add('header-top')
-
-        navlinks.forEach((item) => {
-          if (item.getAttribute('href') === window.location.hash) {
-            item.classList.add('active')
-          } else {
-            item.classList.remove('active')
-          }
-        })
-
-        setTimeout(function () {
-          initial_nav.classList.add('section-show')
-        }, 350);
-
-        scrollto(window.location.hash)
-      }
     }
   });
 
   /**
-   * Skills animation 
-   
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function (direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
- */
-  /**
-   * Testimonials slider
+   * Initializes testimonials slider with responsive configuration
+   * - Enables autoplay with 5s delay
+   * - Configures responsive breakpoints
+   * - Sets up pagination and navigation
    */
   new Swiper('.testimonials-slider', {
     speed: 600,
@@ -178,7 +132,6 @@ export default function Navtools() {
         slidesPerView: 1,
         spaceBetween: 20
       },
-
       1200: {
         slidesPerView: 3,
         spaceBetween: 20
@@ -187,7 +140,10 @@ export default function Navtools() {
   });
 
   /**
-   * Porfolio isotope and filter
+   * Initializes portfolio filtering and layout
+   * - Sets up Isotope grid layout
+   * - Handles filter button clicks
+   * - Updates active filter state
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
@@ -211,27 +167,12 @@ export default function Navtools() {
         });
       }, true);
     }
-
   });
 
   /**
-   * Initiate portfolio lightbox 
-  
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
-
-  /**
-   * Initiate portfolio details lightbox 
-  
-  const portfolioDetailsLightbox = GLightbox({
-    selector: '.portfolio-details-lightbox',
-    width: '90%',
-    height: '90vh'
-  });
- */
-  /**
-   * Portfolio details slider
+   * Initializes portfolio details slider
+   * - Enables autoplay with 5s delay
+   * - Configures navigation and pagination
    */
   new Swiper('.portfolio-details-slider', {
     speed: 400,
@@ -246,5 +187,4 @@ export default function Navtools() {
       clickable: true
     }
   });
-
 }
