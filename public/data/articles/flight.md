@@ -5,13 +5,13 @@ description: An unexpected conversation with an LLM on a flight
 categories: AI, Travel
 -->
 
-I'm not a talkative person, particularly when it involves strangers on flights. In fact, I look forward to the me-time at the airport and plane to just chill, self-reflect, or get immersed in an audio book. There's something relaxing about the dulled humming of noise-cancelled jet engines. 
+I'm generally a quiet person, but I'm particularly reserved when it comes to chattingg to strangers at the airport or on flights. Noise-cancelling headphones on-ear, I look forward to the me-time, chilling, reflecting, immersing myself in an audio book or a series.
 
-On a recent 2-hour flight though, I had a very different experience. After many frustrating failed attempts to squeeze enough resources out of my poor "manager spec" MacBook Air, I had just managed to get llama3.2:1B downloaded using free Airport Wi-Fi ahead of the flight.
+On a recent 2-hour flight however, I had a very different experience. After many frustrating failed attempts to squeeze enough resources out of my poor "manager spec" MacBook Air, I had just managed to get llama3.2:1B downloaded using free Airport Wi-Fi ahead of the flight.
 
-Instead of the Kindle, I opted to continue with the MacBook to check if the model was running as I settled in. What follows is the conversation with that basic setup that somehow kept me engaged for the remainder of that flight.
+This time, instead of pulling out the Kindle, I opted for the MacBook, curious to check if the model was running as I settled in. What follows is the conversation with that basic setup that somehow kept me engaged for the remainder of that flight.
 
-Note that I've bothered fact-checking the information, and I'm almost certain that there's factually incorrect information in there, but that's not the point. As is the case with good conversationalists, the stochastic parrot was able to play the part of a good sounding board, acknowledging ideas put forward and reflecting them in a way that built up the conversation and teased out the threads of ideas.
+Note that I haven't bothered fact-checking the information, and I'm almost certain that there's factually incorrect information in there, but that's not the point. As is the case with good conversationalists, the stochastic parrot was able to play the part of a good sounding board, acknowledging ideas put forward and reflecting them in a way that built up the conversation and teased out the threads of ideas.
 
 I suspect that the conversation will likely not make any sense to many, in the same way that anyone listening in on someone's inner thoughts may be startled. I'm not sure if this form of rubber-ducking is good in the long run, perhaps it's healthier to be steered toward fact and reality than to allow unbounded thoughts to be extrapolated. Keen to hear your thoughts...
 ### Setup
