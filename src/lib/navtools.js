@@ -36,7 +36,6 @@ export default function Navtools() {
     this.classList.toggle('bi-x');
   });
 
-  // Modified navigation link handler
   on('click', 'a.nav-link', function(e) {
     console.log("Clicky");
     e.preventDefault();
@@ -50,33 +49,33 @@ export default function Navtools() {
   
     // Update active states
     navlinks.forEach((item) => {
-      item.classList.remove('active')
-    })
-    this.classList.add('active')
+      item.classList.remove('active');
+    });
+    this.classList.add('active');
   
     // Handle mobile menu
     if (navbar.classList.contains('navbar-mobile')) {
-      navbar.classList.remove('navbar-mobile')
-      let navbarToggle = select('.mobile-nav-toggle')
-      navbarToggle.classList.toggle('bi-list')
-      navbarToggle.classList.toggle('bi-x')
+      navbar.classList.remove('navbar-mobile');
+      let navbarToggle = select('.mobile-nav-toggle');
+      navbarToggle.classList.toggle('bi-list');
+      navbarToggle.classList.toggle('bi-x');
     }
   
     // Handle header and sections
     if (targetPath === '/') {
-      header.classList.remove('header-top')
+      header.classList.remove('header-top');
       sections.forEach((item) => {
-        item.classList.remove('section-show')
-      })
+        item.classList.remove('section-show');
+      });
     } else {
-      header.classList.add('header-top')
+      header.classList.add('header-top');
       
-      // Always use setTimeout for consistency
       setTimeout(() => {
         sections.forEach((item) => {
-          item.classList.remove('section-show')
-        })
-        const sectionId = targetPath.replace('/', '');
+          item.classList.remove('section-show');
+        });
+        // Get only the main section ID
+        const sectionId = targetPath.replace('/', '').split('/')[0];
         const targetSection = select(`section#${sectionId}`);
         console.log('Looking for section with ID:', sectionId);
         console.log('Found section:', targetSection);
@@ -85,28 +84,46 @@ export default function Navtools() {
         }
       }, 350);
     }
-  })
+  });
   
 
+// Modified initial load handler
+window.addEventListener('load', () => {
+  const currentPath = window.location.pathname;
+  if (currentPath !== '/') {
+    let header = select('header');
+    let navlinks = select('.nav-link', true);
+    let sections = select('section', true);
 
-  // Modified initial load handler
-  window.addEventListener('load', () => {
-    const currentPath = window.location.pathname;
-    if (currentPath !== '/') {
-      let header = select('header')
-      let navlinks = select('nav-link', true)
+    header.classList.add('header-top');
 
-      header.classList.add('header-top')
+    // Remove section-show from all sections
+    sections.forEach((item) => {
+      item.classList.remove('section-show');
+    });
 
-      navlinks.forEach((item) => {
-        if (item.getAttribute('href') === currentPath) {
-          item.classList.add('active')
-        } else {
-          item.classList.remove('active')
-        }
-      })
+    // Get main section ID (first part of the path)
+    const sectionId = currentPath.replace('/', '').split('/')[0];
+    const targetSection = select(`section#${sectionId}`);
+    
+    console.log('Initial load - looking for section:', sectionId);
+    
+    if (targetSection) {
+      console.log('Found section, showing:', sectionId);
+      targetSection.classList.add('section-show');
     }
-  });
+
+    // Update active nav link - match only the main path
+    navlinks.forEach((item) => {
+      const navPath = item.getAttribute('href').split('/')[1]; // Get first part after /
+      if (navPath === sectionId) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  }
+});
 
   /**
    * Initializes testimonials slider with responsive configuration
