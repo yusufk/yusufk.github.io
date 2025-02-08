@@ -6,12 +6,13 @@
 */
 import Swiper from 'swiper/bundle';
 import Isotope from 'isotope-layout';
-//import GLightbox from 'glightbox';
-//import Waypoint from 'waypoints/lib/noframework.waypoints.min.js';
 
 export default function Navtools() {
   /**
-   * Easy selector helper function
+   * Selects DOM elements with error handling
+   * @param {string} el - CSS selector string
+   * @param {boolean} all - If true, returns all matching elements; if false, returns first match
+   * @returns {Element|Element[]|null} Single element or array of elements matching the selector
    */
   const select = (el, all = false) => {
     el = el.trim()
@@ -23,7 +24,11 @@ export default function Navtools() {
   }
 
   /**
-   * Easy event listener function
+   * Attaches event listeners to DOM elements with support for multiple elements
+   * @param {string} type - Event type (e.g., 'click', 'submit')
+   * @param {string} el - CSS selector for target element(s)
+   * @param {Function} listener - Event handler function
+   * @param {boolean} all - If true, attaches to all matching elements
    */
   const on = (type, el, listener, all = false) => {
     let selectEl = select(el, all)
@@ -38,7 +43,8 @@ export default function Navtools() {
   }
 
   /**
-   * Scrolls to an element with header offset
+   * Smoothly scrolls to the top of the page
+   * @param {string} el - Target element ID (currently unused in implementation)
    */
   const scrollto = (el) => {
     window.scrollTo({
@@ -48,18 +54,23 @@ export default function Navtools() {
   }
 
   /**
-   * Mobile nav toggle
+   * Handles mobile navigation menu toggle
+   * Toggles mobile navigation visibility and switches between hamburger/close icons
    */
-  on('click', '.mobile-nav-toggle', function (e) {
+  on('click', '.mobile-nav-toggle', function(e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Manages navigation link clicks and section visibility
+   * - Updates active navigation state
+   * - Handles mobile menu state
+   * - Controls section visibility animations
+   * - Manages header styling
    */
-  on('click', '#navbar .nav-link', function (e) {
+  on('click', '#navbar .nav-link', function(e) {
     let section = select(this.hash)
     if (section) {
       e.preventDefault()
@@ -92,7 +103,7 @@ export default function Navtools() {
 
       if (!header.classList.contains('header-top')) {
         header.classList.add('header-top')
-        setTimeout(function () {
+        setTimeout(function() {
           sections.forEach((item) => {
             item.classList.remove('section-show')
           })
@@ -111,7 +122,11 @@ export default function Navtools() {
   }, true)
 
   /**
-   * Activate/show sections on load with hash links
+   * Initializes page state based on URL hash
+   * - Sets active navigation item
+   * - Shows correct section
+   * - Adjusts header styling
+   * - Performs smooth scroll to target section
    */
   window.addEventListener('load', () => {
     if (window.location.hash) {
@@ -131,7 +146,7 @@ export default function Navtools() {
           }
         })
 
-        setTimeout(function () {
+        setTimeout(function() {
           initial_nav.classList.add('section-show')
         }, 350);
 
@@ -141,24 +156,10 @@ export default function Navtools() {
   });
 
   /**
-   * Skills animation 
-   
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function (direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
- */
-  /**
-   * Testimonials slider
+   * Initializes testimonials slider with responsive configuration
+   * - Enables autoplay with 5s delay
+   * - Configures responsive breakpoints
+   * - Sets up pagination and navigation
    */
   new Swiper('.testimonials-slider', {
     speed: 600,
@@ -178,7 +179,6 @@ export default function Navtools() {
         slidesPerView: 1,
         spaceBetween: 20
       },
-
       1200: {
         slidesPerView: 3,
         spaceBetween: 20
@@ -187,7 +187,10 @@ export default function Navtools() {
   });
 
   /**
-   * Porfolio isotope and filter
+   * Initializes portfolio filtering and layout
+   * - Sets up Isotope grid layout
+   * - Handles filter button clicks
+   * - Updates active filter state
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
@@ -199,9 +202,9 @@ export default function Navtools() {
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function (e) {
+      on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();
-        portfolioFilters.forEach(function (el) {
+        portfolioFilters.forEach(function(el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -211,27 +214,12 @@ export default function Navtools() {
         });
       }, true);
     }
-
   });
 
   /**
-   * Initiate portfolio lightbox 
-  
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
-
-  /**
-   * Initiate portfolio details lightbox 
-  
-  const portfolioDetailsLightbox = GLightbox({
-    selector: '.portfolio-details-lightbox',
-    width: '90%',
-    height: '90vh'
-  });
- */
-  /**
-   * Portfolio details slider
+   * Initializes portfolio details slider
+   * - Enables autoplay with 5s delay
+   * - Configures navigation and pagination
    */
   new Swiper('.portfolio-details-slider', {
     speed: 400,
@@ -246,5 +234,4 @@ export default function Navtools() {
       clickable: true
     }
   });
-
 }
