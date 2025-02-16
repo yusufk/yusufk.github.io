@@ -68,7 +68,7 @@ class Articles extends Component {
 
     fetchArticles = async () => {
         const markdownFiles = [];
-        const dataDir = '/data/articles';
+        const dataDir = '/content';
 
         try {
             const response = await fetch(`${dataDir}/index.json`);
