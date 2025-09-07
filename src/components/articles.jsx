@@ -6,8 +6,8 @@ import rehypeRaw from 'rehype-raw';
 
 // Wrapper component to access URL parameters
 const ArticlesWrapper = (props) => {
-  const params = useParams();
-  return <Articles {...props} slug={params.slug} />;
+    const params = useParams();
+    return <Articles {...props} slug={params.slug} />;
 };
 
 function parseMetadata(text) {
@@ -105,11 +105,10 @@ class Articles extends Component {
                 <button
                     key={i}
                     onClick={() => this.handlePageChange(i)}
-                    className={`px-3 py-1 mx-1 rounded ${
-                        currentPage === i
+                    className={`px-3 py-1 mx-1 rounded ${currentPage === i
                             ? 'bg-blue-500 text-white'
                             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                    }`}
+                        }`}
                 >
                     {i}
                 </button>
@@ -146,6 +145,9 @@ class Articles extends Component {
                                 <div className="article">
                                     <div className="article-header">
                                         <h1>{article.metadata.title}</h1>
+                                        <small className="text-muted">
+                                            Published: <time dateTime={article.metadata.date}>{article.metadata.date}</time>
+                                        </small>
                                     </div>
                                     <div className="article-body">
                                         <ReactMarkdown children={article.text} skipHtml={false} rehypePlugins={[rehypeRaw]} />
@@ -157,21 +159,21 @@ class Articles extends Component {
                                 </div>
                             </div>
                             <div className="col-md-4">
-                            <div className="section-title">
-                                <h2>Article List</h2>
+                                <div className="section-title">
+                                    <h2>Article List</h2>
+                                </div>
+                                <div className="article-list">
+                                    <ul>
+                                        {articles.map((article) => (
+                                            <li key={article.metadata.slug}>
+                                                <Link to={`/articles/${article.metadata.slug}`}>
+                                                    {article.metadata.title}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
-                            <div className="article-list">
-                                <ul>
-                                    {articles.map((article) => (
-                                        <li key={article.metadata.slug}>
-                                            <Link to={`/articles/${article.metadata.slug}`}>
-                                                {article.metadata.title}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </section>
