@@ -25,9 +25,25 @@ export default class Resume extends Component {
                                 </div>
                                 <h3 className="resume-title">Professional Experience</h3>
                                 <div className="resume-item">
+                                    <h4>Head of Integrated Digital Engagement</h4>
+                                    <h5>X bigly Labs · Full-time</h5>
+                                    <h5>Aug 2025 - Present</h5>
+                                    <p>
+                                        <em>City of Johannesburg, Gauteng, South Africa · Hybrid</em>
+                                    </p>
+                                    <ul>
+                                        <li>Develop and implement a comprehensive digital strategy roadmap aligned with Dis-Chem’s business objectives</li>
+                                        <li>Drive the digital transformation agenda, ensuring alignment across departments and stakeholders</li>
+                                        <li>Oversee the transition to new digital platforms, ensuring seamless integration with existing systems</li>
+                                        <li>Identify, prioritise, and implement innovative digital features to enhance operational efficiency and customer engagement</li>
+                                        <li>Lead e-commerce optimisation efforts, focusing on improving website functionality, conversion rates, and customer satisfaction</li>
+                                        <li>Map and refine the customer journey across digital touchpoints to create seamless and personalised shopping experiences</li>
+                                    </ul>
+                                </div>
+                                <div className="resume-item">
                                     <h4>Product Head: GenAI</h4>
                                     <h5>Capitec · Full-time</h5>
-                                    <h5>Dec 2024 - Current</h5>
+                                    <h5>Dec 2024 - Aug 2025</h5>
                                     <p>
                                         <em>City of Johannesburg, Gauteng, South Africa · Hybrid</em>
                                     </p>
