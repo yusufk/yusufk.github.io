@@ -1,6 +1,6 @@
 {
-  "short_name": "Yusufs website",
-  "name": "Code for yusuf.kaka.co.za",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
