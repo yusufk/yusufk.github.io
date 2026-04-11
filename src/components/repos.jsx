@@ -38,7 +38,7 @@ export default class Repositories extends Component {
         }
 
         return (
-            <section id="repos" className="repos">
+            <section id="repos" className="repos section-show">
                 <div className="container">
                     <div className="section-title">
                         <h2>Repositories</h2>

@@ -9,7 +9,8 @@ import 'swiper/css/bundle';
 import './index.css';
 import App from './App';
 import Navtools from './lib/navtools.js';
-import ReactGA from 'react-ga4';
+import pkg from 'react-ga4';
+const ReactGA = pkg.default || pkg;
 
 ReactGA.initialize('G-J0X6EB8JL4');
 
