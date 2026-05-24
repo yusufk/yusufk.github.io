@@ -5,7 +5,7 @@ import Resume from './components/resume';
 import Repositories from './components/repos';
 import Articles from './components/articles';
 import Portfolio from './components/portfolio';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function AppContent() {
