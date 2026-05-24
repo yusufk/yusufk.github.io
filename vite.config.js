@@ -6,11 +6,17 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
   },
-  server: {
-    port: 3000,
-    open: true,
+  optimizeDeps: {
+    include: ['react-github-calendar'],
   },
   build: {
     outDir: 'build',
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
+  },
+  server: {
+    port: 3000,
+    open: true,
   },
 })
