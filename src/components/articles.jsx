@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import LazyLoad from 'react-lazyload';
+import LazyLoadModule from 'react-lazyload';
+const LazyLoad = LazyLoadModule.default || LazyLoadModule;
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import GitHubCalendar from 'react-github-calendar';
+import GitHubCalendarModule from 'react-github-calendar';
+const GitHubCalendar = GitHubCalendarModule.default || GitHubCalendarModule;
 
 export default class Repositories extends Component {
     constructor(props) {
