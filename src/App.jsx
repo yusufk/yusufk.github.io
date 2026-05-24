@@ -6,20 +6,20 @@ import Repositories from './components/repos';
 import Articles from './components/articles';
 import Portfolio from './components/portfolio';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
 
 function AppContent() {
   const location = useLocation();
 
-  useEffect(() => {
-    const header = document.querySelector('header');
+  useLayoutEffect(() => {
+    const header = document.getElementById('header');
     if (!header) return;
     if (location.pathname === '/') {
       header.classList.remove('header-top');
     } else {
       header.classList.add('header-top');
     }
-  }, [location]);
+  });
 
   return (
     <div className="App">
