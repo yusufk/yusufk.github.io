@@ -7,12 +7,13 @@ export default defineConfig({
     extensions: ['.js', '.jsx', '.json'],
   },
   optimizeDeps: {
-    include: ['react-github-calendar'],
+    include: ['react-github-calendar', 'react-lazyload'],
   },
   build: {
     outDir: 'build',
     commonjsOptions: {
       transformMixedEsModules: true,
+      esmExternals: true,
     },
   },
   server: {
