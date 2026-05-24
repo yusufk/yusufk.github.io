@@ -5,11 +5,23 @@ import Resume from './components/resume';
 import Repositories from './components/repos';
 import Articles from './components/articles';
 import Portfolio from './components/portfolio';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const header = document.querySelector('header');
+    if (!header) return;
+    if (location.pathname === '/') {
+      header.classList.remove('header-top');
+    } else {
+      header.classList.add('header-top');
+    }
+  }, [location]);
+
   return (
-    <Router>
     <div className="App">
       <Header />
       <Routes>
@@ -21,6 +33,13 @@ function App() {
         <Route path="/articles/:slug" element={<Articles />} />
       </Routes>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }

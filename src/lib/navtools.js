@@ -11,157 +11,47 @@ export default function Navtools() {
     }
   }
   const on = (type, el, listener, all = false) => {
-    // Add debug log
-    console.log('Setting up listener for:', el);
-
     document.addEventListener(type, (e) => {
-      // Add debug log
-      console.log('Event triggered:', e.target);
       const target = e.target.closest(el);
-      // Add debug log
-      console.log('Closest match:', target);
-
       if (target) {
         listener.call(target, e);
       }
     });
   }
 
-  // Add mobile nav toggle handler
+  // Mobile nav toggle
   on('click', 'i.mobile-nav-toggle', function(e) {
-    console.log('Mobile toggle clicked');
     let navbar = select('nav');
     navbar.classList.toggle('navbar-mobile');
     this.classList.toggle('bi-list');
     this.classList.toggle('bi-x');
   });
 
+  // Close mobile menu when a nav link is clicked
   on('click', 'a.nav-link', function(e) {
-    console.log("Clicky");
-    e.preventDefault();
-    const targetPath = this.getAttribute('href');
-    console.log('Target path:', targetPath);
-    
     let navbar = select('nav');
-    let header = select('header');
-    let sections = select('section', true);
-    let navlinks = select('.nav-link', true);
-  
-    // Update active states
-    navlinks.forEach((item) => {
-      item.classList.remove('active');
-    });
-    this.classList.add('active');
-  
-    // Handle mobile menu
     if (navbar.classList.contains('navbar-mobile')) {
       navbar.classList.remove('navbar-mobile');
       let navbarToggle = select('.mobile-nav-toggle');
       navbarToggle.classList.toggle('bi-list');
       navbarToggle.classList.toggle('bi-x');
     }
-  
-    // Handle header and sections
-    if (targetPath === '/') {
-      header.classList.remove('header-top');
-      sections.forEach((item) => {
-        item.classList.remove('section-show');
-      });
-    } else {
-      header.classList.add('header-top');
-      
-      setTimeout(() => {
-        sections.forEach((item) => {
-          item.classList.remove('section-show');
-        });
-        // Get only the main section ID
-        const sectionId = targetPath.replace('/', '').split('/')[0];
-        const targetSection = select(`section#${sectionId}`);
-        console.log('Looking for section with ID:', sectionId);
-        console.log('Found section:', targetSection);
-        if (targetSection) {
-          targetSection.classList.add('section-show');
-        }
-      }, 350);
-    }
   });
-  
 
-// Modified initial load handler
-window.addEventListener('load', () => {
-  const currentPath = window.location.pathname;
-  if (currentPath !== '/') {
-    let header = select('header');
-    let navlinks = select('.nav-link', true);
-    let sections = select('section', true);
-
-    header.classList.add('header-top');
-
-    // Remove section-show from all sections
-    sections.forEach((item) => {
-      item.classList.remove('section-show');
-    });
-
-    // Get main section ID (first part of the path)
-    const sectionId = currentPath.replace('/', '').split('/')[0];
-    const targetSection = select(`section#${sectionId}`);
-    
-    console.log('Initial load - looking for section:', sectionId);
-    
-    if (targetSection) {
-      console.log('Found section, showing:', sectionId);
-      targetSection.classList.add('section-show');
-    }
-
-    // Update active nav link - match only the main path
-    navlinks.forEach((item) => {
-      const navPath = item.getAttribute('href').split('/')[1]; // Get first part after /
-      if (navPath === sectionId) {
-        item.classList.add('active');
-      } else {
-        item.classList.remove('active');
-      }
-    });
-  }
-});
-
-  /**
-   * Initializes testimonials slider with responsive configuration
-   * - Enables autoplay with 5s delay
-   * - Configures responsive breakpoints
-   * - Sets up pagination and navigation
-   */
+  // Swiper: testimonials
   new Swiper('.testimonials-slider', {
     speed: 600,
     loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
+    autoplay: { delay: 5000, disableOnInteraction: false },
     slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
+    pagination: { el: '.swiper-pagination', type: 'bullets', clickable: true },
     breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
+      320: { slidesPerView: 1, spaceBetween: 20 },
+      1200: { slidesPerView: 3, spaceBetween: 20 }
     }
   });
 
-  /**
-   * Initializes portfolio filtering and layout
-   * - Sets up Isotope grid layout
-   * - Handles filter button clicks
-   * - Updates active filter state
-   */
+  // Isotope portfolio filtering
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
     if (portfolioContainer) {
@@ -170,38 +60,20 @@ window.addEventListener('load', () => {
         layoutMode: 'fitRows'
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
-
       on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function (el) {
-          el.classList.remove('filter-active');
-        });
+        select('#portfolio-flters li', true).forEach(el => el.classList.remove('filter-active'));
         this.classList.add('filter-active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
+        portfolioIsotope.arrange({ filter: this.getAttribute('data-filter') });
       }, true);
     }
   });
 
-  /**
-   * Initializes portfolio details slider
-   * - Enables autoplay with 5s delay
-   * - Configures navigation and pagination
-   */
+  // Swiper: portfolio details
   new Swiper('.portfolio-details-slider', {
     speed: 400,
     loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
+    autoplay: { delay: 5000, disableOnInteraction: false },
+    pagination: { el: '.swiper-pagination', type: 'bullets', clickable: true }
   });
 }

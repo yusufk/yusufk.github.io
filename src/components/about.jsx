@@ -8,7 +8,7 @@ export default class About extends Component {
         return (
             <div>
                 {/* ======= About Section ======= */}
-                <section id="about" className="about">
+                <section id="about" className="about section-show">
                     {/* ======= About Me ======= */}
                     <div className="about-me container">
                         <div className="section-title">
@@ -239,7 +239,7 @@ export default class About extends Component {
                                             <i className="bx bxs-quote-alt-right quote-icon-right" />
                                         </p>
                                         <img
-                                            src={require("../img/testimonials/testimonials-1.jpg")}
+                                            src={new URL("../img/testimonials/testimonials-1.jpg", import.meta.url).href}
                                             className="testimonial-img"
                                             alt=""
                                         />
@@ -258,7 +258,7 @@ export default class About extends Component {
                                             <i className="bx bxs-quote-alt-right quote-icon-right" />
                                         </p>
                                         <img
-                                            src={require("../img/testimonials/testimonials-2.jpg")}
+                                            src={new URL("../img/testimonials/testimonials-2.jpg", import.meta.url).href}
                                             className="testimonial-img"
                                             alt=""
                                         />
@@ -275,7 +275,7 @@ export default class About extends Component {
                                             <i className="bx bxs-quote-alt-right quote-icon-right" />
                                         </p>
                                         <img
-                                            src={require("../img/testimonials/testimonials-3.jpg")}
+                                            src={new URL("../img/testimonials/testimonials-3.jpg", import.meta.url).href}
                                             className="testimonial-img"
                                             alt=""
                                         />
@@ -293,7 +293,7 @@ export default class About extends Component {
                                             <i className="bx bxs-quote-alt-right quote-icon-right" />
                                         </p>
                                         <img
-                                            src={require("../img/testimonials/testimonials-4.jpg")}
+                                            src={new URL("../img/testimonials/testimonials-4.jpg", import.meta.url).href}
                                             className="testimonial-img"
                                             alt=""
                                         />
@@ -310,7 +310,7 @@ export default class About extends Component {
                                             <i className="bx bxs-quote-alt-right quote-icon-right" />
                                         </p>
                                         <img
-                                            src={require("../img/testimonials/testimonials-5.jpg")}
+                                            src={new URL("../img/testimonials/testimonials-5.jpg", import.meta.url).href}
                                             className="testimonial-img"
                                             alt=""
                                         />

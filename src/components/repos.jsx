@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import GitHubCalendar from 'react-github-calendar';
+import GitHubCalendarModule from 'react-github-calendar';
+const GitHubCalendar = GitHubCalendarModule.default || GitHubCalendarModule;
 
 export default class Repositories extends Component {
     constructor(props) {
@@ -38,7 +39,7 @@ export default class Repositories extends Component {
         }
 
         return (
-            <section id="repos" className="repos">
+            <section id="repos" className="repos section-show">
                 <div className="container">
                     <div className="section-title">
                         <h2>Repositories</h2>

@@ -7,7 +7,7 @@ export default class Resume extends Component {
         return (
             <div>
                 {/* ======= Resume Section ======= */}
-                <section id="resume" className="resume">
+                <section id="resume" className="resume section-show">
                     <div className="container">
                         <div className="section-title">
                             <h2>Resume</h2>
