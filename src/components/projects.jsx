@@ -9,6 +9,7 @@ const PROJECTS = [
         description: 'A git-based recipe site for devs who cook. Everything lives in Git — markdown files, PRs for contributions, GitHub OAuth. No database, no CMS.',
         tags: ['react', 'typescript', 'github-api'],
         stack: 'TypeScript',
+        image: 'data/projects/recipo.png',
         repo: 'https://github.com/yusufk/recipo',
         demo: 'https://yusuf.kaka.co.za/recipo/',
     },
@@ -18,6 +19,7 @@ const PROJECTS = [
         description: 'Multi-branch poller for the South African DHA booking system with auto-booking and Telegram alerts. CLI plus a web frontend backed by a Cloudflare Worker CORS proxy.',
         tags: ['python', 'cloudflare-worker', 'automation'],
         stack: 'Python',
+        image: 'data/projects/dha-slot-sniper.png',
         repo: 'https://github.com/yusufk/dha-slot-sniper',
         demo: 'https://yusuf.kaka.co.za/dha-slot-sniper/',
     },
@@ -27,6 +29,7 @@ const PROJECTS = [
         description: 'A macOS screen zoom and annotation tool. Continued fork after the original was "Sherlocked" by Microsoft. Distributed via Homebrew.',
         tags: ['swift', 'macos', 'homebrew'],
         stack: 'Swift',
+        image: 'data/projects/zoomacit.png',
         repo: 'https://github.com/yusufk/ZoomacIt',
         demo: 'https://yusuf.kaka.co.za/ZoomacIt/',
     },
@@ -36,6 +39,7 @@ const PROJECTS = [
         description: 'A containerised Python bridge that lets a Telegram bot drive an AI CLI agent, with task scheduling, proactive messaging, and an event bus for smart-home integration.',
         tags: ['python', 'docker', 'telegram'],
         stack: 'Python',
+        image: null,
         repo: 'https://github.com/yusufk/kiro-claw',
         demo: null,
     },
@@ -54,9 +58,15 @@ export default class Projects extends Component {
                         {PROJECTS.map((project) => (
                             <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" key={project.name}>
                                 <div className="icon-box">
-                                    <div className="icon">
-                                        <i className="bx bx-cube-alt" />
-                                    </div>
+                                    {project.image ? (
+                                        <a href={project.demo || project.repo} target="_blank" rel="noopener noreferrer" className="project-thumb">
+                                            <img src={project.image} alt={`${project.name} screenshot`} loading="lazy" />
+                                        </a>
+                                    ) : (
+                                        <div className="project-thumb project-thumb-placeholder">
+                                            <i className="bx bx-cube-alt" />
+                                        </div>
+                                    )}
                                     <h4>{project.name}</h4>
                                     {project.tagline && <p className="project-tagline"><em>{project.tagline}</em></p>}
                                     <p className="card-text">{project.description}</p>

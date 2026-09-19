@@ -1393,6 +1393,58 @@ section .container {
 /*--------------------------------------------------------------
 # Projects (app-style cards)
 --------------------------------------------------------------*/
+#projects .icon-box {
+  padding: 0 0 24px 0;
+  text-align: left;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #eef2f7;
+  box-shadow: 0 6px 20px rgba(16, 110, 234, 0.06);
+}
+
+#projects .icon-box:hover {
+  box-shadow: 0 10px 28px rgba(16, 110, 234, 0.14);
+}
+
+#projects .icon-box h4,
+#projects .icon-box .card-text,
+#projects .icon-box .project-tagline,
+#projects .icon-box .project-tags,
+#projects .icon-box .project-links {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.project-thumb {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #f6f9fe;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.project-thumb:hover img {
+  transform: scale(1.04);
+}
+
+.project-thumb-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #106eea;
+  font-size: 48px;
+}
+
 .project-tagline {
   color: #106eea;
   margin-bottom: 8px;
