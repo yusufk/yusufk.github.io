@@ -1388,3 +1388,62 @@ section .container {
     transform: translateY(-90%);
   }
 }
+
+
+/*--------------------------------------------------------------
+# Projects (app-style cards)
+--------------------------------------------------------------*/
+.project-tagline {
+  color: #106eea;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.project-tag,
+.project-stack {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.project-tag {
+  background: #f1f6fe;
+  color: #4a6785;
+}
+
+.project-stack {
+  background: #106eea;
+  color: #fff;
+  font-weight: 600;
+}
+
+.project-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.project-links a {
+  color: #106eea;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.project-links a:hover {
+  color: #3b8af2;
+}
+
+.project-links a i {
+  vertical-align: middle;
+  margin-right: 4px;
+}

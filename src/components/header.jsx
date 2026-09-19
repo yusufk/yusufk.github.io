@@ -50,6 +50,11 @@ export default class Header extends Component {
                                     </Link>
                                 </li>
                                 <li>
+                                    <Link to="/projects" className="nav-link">
+                                        Projects
+                                    </Link>
+                                </li>
+                                <li>
                                     <Link to="/repos" className="nav-link">
                                         Repositories
                                     </Link>
