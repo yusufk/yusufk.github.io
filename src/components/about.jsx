@@ -40,7 +40,7 @@ export default class About extends Component {
                                         <ul>
                                             <li>
                                                 <i className="bi bi-chevron-right" /> <strong>Age:</strong>{" "}
-                                                <del><span>45</span></del>&nbsp;&nbsp;&nbsp;&nbsp;18
+                                                <span>48</span>
                                             </li>
                                             <li>
                                                 <i className="bi bi-chevron-right" /> <strong>Qualification:</strong>{" "}

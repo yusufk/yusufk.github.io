@@ -3,6 +3,7 @@ import About from './components/about'
 import Header from './components/header';
 import Resume from './components/resume';
 import Repositories from './components/repos';
+import Projects from './components/projects';
 import Articles from './components/articles';
 import Portfolio from './components/portfolio';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
@@ -28,6 +29,7 @@ function AppContent() {
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/repos" element={<Repositories />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:slug" element={<Articles />} />
