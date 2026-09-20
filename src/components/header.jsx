@@ -11,7 +11,6 @@ export default class Header extends Component {
                             <Link to="/">Yusuf Kaka</Link>
                         </h1>
                         <h2>
-                            I'm a&nbsp;
                             <div className="ms-slider ms-slider--prefix">
                                 <ul className="ms-slider__words ms-slider__words--prefix">
                                         <li className="ms-slider__word ms-slider__word--prefix">Typical</li>
