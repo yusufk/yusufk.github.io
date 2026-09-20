@@ -1,8 +1,34 @@
 import React, { Component } from 'react'
+import Swiper from 'swiper/bundle'
 // Use an image
 import me from '../img/cappuccino_yusuf.png'
 
 export default class About extends Component {
+
+    componentDidMount() {
+        // Initialise the testimonials carousel here (not in navtools) so the
+        // DOM exists — navtools runs at app mount, before /about is rendered,
+        // which is why the slider never initialised on client-side navigation.
+        this.testimonialsSwiper = new Swiper('.testimonials-slider', {
+            speed: 600,
+            loop: true,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            grabCursor: true,
+            pagination: { el: '.swiper-pagination', type: 'bullets', clickable: true },
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                1200: { slidesPerView: 3, spaceBetween: 20 }
+            }
+        });
+    }
+
+    componentWillUnmount() {
+        if (this.testimonialsSwiper) {
+            this.testimonialsSwiper.destroy(true, true);
+            this.testimonialsSwiper = null;
+        }
+    }
 
     render() {
         return (
