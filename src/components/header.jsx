@@ -11,7 +11,22 @@ export default class Header extends Component {
                             <Link to="/">Yusuf Kaka</Link>
                         </h1>
                         <h2>
-                            I'm a passionate&nbsp;
+                            I'm a&nbsp;
+                            <div className="ms-slider ms-slider--prefix">
+                                <ul className="ms-slider__words ms-slider__words--prefix">
+                                        <li className="ms-slider__word ms-slider__word--prefix">Typical</li>
+                                        <li className="ms-slider__word ms-slider__word--prefix">Curious</li>
+                                        <li className="ms-slider__word ms-slider__word--prefix">Grateful</li>
+                                        <li className="ms-slider__word ms-slider__word--prefix">Incurable</li>
+                                        <li className="ms-slider__word ms-slider__word--prefix">Bruised</li>
+                                        <li className="ms-slider__word ms-slider__word--prefix">Outnumbered</li>
+                                        <li className="ms-slider__word ms-slider__word--prefix">Perpetual</li>
+                                        <li className="ms-slider__word ms-slider__word--prefix">Aspiring</li>
+                                        <li className="ms-slider__word ms-slider__word--prefix">Lucky</li>
+                                        <li className="ms-slider__word ms-slider__word--prefix">Typical</li>
+                                </ul>
+                            </div>
+                            &nbsp;
                             <div className="ms-slider">
                                 <ul className="ms-slider__words">
                                         <li className="ms-slider__word">Engineer</li>
