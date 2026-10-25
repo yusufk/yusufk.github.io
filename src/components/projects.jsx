@@ -24,6 +24,16 @@ const PROJECTS = [
         demo: 'https://yusuf.kaka.co.za/dha-slot-sniper/',
     },
     {
+        name: 'eBilal',
+        tagline: 'A masjid radio that tunes itself.',
+        description: 'Turns a Raspberry Pi into a dedicated player for Livemasjid.com streams. Auto-plays your favourite masjids the moment they go live, with a warm web interface, player-side volume, and in-app updates straight from GitHub releases.',
+        tags: ['python', 'raspberry-pi', 'fastapi'],
+        stack: 'Python',
+        image: 'data/projects/ebilal.png',
+        repo: 'https://github.com/Muslims-in-IT/ebilal',
+        demo: null,
+    },
+    {
         name: 'ZoomacIt',
         tagline: 'ZoomIt-style screen zoom for macOS.',
         description: 'A macOS screen zoom and annotation tool. Continued fork after the original was "Sherlocked" by Microsoft. Distributed via Homebrew.',
