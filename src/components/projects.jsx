@@ -34,6 +34,16 @@ const PROJECTS = [
         demo: null,
     },
     {
+        name: 'HeadTrack',
+        tagline: 'Sound that stays put when you turn your head.',
+        description: 'Head-tracked spatial audio for any headphones on macOS. Follows your head with the webcam and keeps everything your Mac plays anchored to the screen, like real speakers. Runs entirely on-device from the menu bar. Distributed via Homebrew.',
+        tags: ['swift', 'macos', 'spatial-audio'],
+        stack: 'Swift',
+        image: 'data/projects/headtrack.png',
+        repo: 'https://github.com/yusufk/head-tracked-audio',
+        demo: null,
+    },
+    {
         name: 'ZoomacIt',
         tagline: 'ZoomIt-style screen zoom for macOS.',
         description: 'A macOS screen zoom and annotation tool. Continued fork after the original was "Sherlocked" by Microsoft. Distributed via Homebrew.',
